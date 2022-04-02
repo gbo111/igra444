@@ -1,0 +1,95 @@
+@font-face {
+	font-family: 'NHG_Bd';
+	src: url(/font/NHaasGroteskTXPro-75Bd.ttf);
+	font-style: normal;
+	font-weight: 100;
+}
+
+
+
+nav {
+	background-color: none;
+	display: flex;
+	flex: wrap;
+
+	/* align-items: center;
+	justify-content: center; */
+	position: fixed;
+	padding: 20px 30px 0 50px;
+	/* top: 0;
+  left: 0; */
+	height: 100vh;
+	transform: translateX(-100%);
+	z-index: 1;
+	 /* -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); */
+}
+
+nav.active {
+	transform: translateX(0);
+	background-color: white;
+	height: 200px;
+}
+
+nav ul {
+	padding:  0;
+	list-style-type: none;
+
+}
+
+nav ul li {
+	margin: 14px 0;
+	text-align: right;
+}
+
+nav a {
+	visibility: hidden;
+	color: #0077C0;
+	font-size: 24px;
+	font-family: NHG_Bd;
+	font-weight: 100;
+	text-decoration: none;
+	text-transform: uppercase;
+
+}
+
+
+
+nav.active a {
+	visibility: visible;
+}
+
+nav a:hover {
+	color: #E4032E;
+}
+
+button {
+	z-index: 100;
+}
+
+.toggle {
+	border: none;
+	font-size: 20px;
+	padding: 10px 15px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translateX(100%);
+	cursor: pointer;
+
+}
+
+.toggle .fa-bars {
+	display: block;
+}
+
+.toggle .fa-times {
+	display: none;
+}
+
+nav.active .toggle .fa-bars {
+	display: none;
+}
+
+nav.active .toggle .fa-times {
+	display: block;
+}

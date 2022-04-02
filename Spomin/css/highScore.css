@@ -1,0 +1,132 @@
+@font-face {
+	font-family: 'NHG_Bd';
+	src: url(/font/NHaasGroteskTXPro-75Bd.ttf);
+	font-style: normal;
+	font-weight: 100;
+}
+
+.highScore {
+	  visibility: hidden;
+	  display:flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0;
+		/* flex-flow: column nowrap; */
+
+		/* padding-top: 7em;
+		padding-right: 2em; */
+		/* max-width: 1000px; */
+		width: 100%;
+		height: 100vh;
+	  background-color: white;
+		position: fixed;
+		padding: 0;
+		/* height: 100vh; */
+		 z-index: 100;
+		 top: 0;
+	  left: 0;
+		/* transform: translateX(-100%); */
+	}
+
+	.HSlists {
+		position: absolute;
+		top: 0;
+		display:flex;
+		flex-flow: column nowrap;
+		padding-top: 4em;
+		margin: auto;
+		/* padding-right: 4em; */
+		width: 100%;
+	}
+
+
+
+	.closeHS {
+		border: none;
+		font-size: 20px;
+		 /* padding: 0 15px;  */
+		position: absolute;
+		top: 0;
+		right: 0;
+		/* transform: translateX(100%); */
+		cursor: pointer;
+		z-index: 500;
+
+	}
+
+	.highScore.active {
+		visibility: visible;
+		 /* transform: translateX(-50%) */
+		}
+
+
+
+  /* .highContainer {
+		width: 50%;
+	} */
+
+
+  .highScoreName{
+		color: #0077C0;
+		border: none;
+		align-self: center;
+		/* padding: 0 2em; */
+		position: absolute;
+		top: 0;
+		right: 50%;
+		transform: translateX(50%);
+	  font-size: 30px;
+		font-family: NHG_Bd;
+		font-weight: 100;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+
+   .highScore ul {
+    color: #545454;
+		display: flex;
+ 	  flex-flow: row nowrap;
+		justify-content: center;
+		width: 100%;
+		/* padding-top: 3em; */
+		/* padding-right: 1em; */
+		list-style-type: none;
+		/* background-color: red; */
+    background: linear-gradient(90deg, white, #F5F5F5 40%);
+
+ 	  font-size: 10px;
+ 		font-family: NHG_Bd;
+ 		font-weight: 100;
+ 		text-decoration: none;
+ 		/* text-transform: uppercase; */
+		line-height: 1.8;
+	 }
+
+	 .highScore ul li {
+	   margin: 1em .5em;
+	 }
+
+	 .highScore p {
+    display:flex;
+ 		/* padding-right: 1em; */
+		flex-flow: row nowrap;
+		justify-content: center;
+		margin: 0;
+    padding: 0;
+		font-size: 14px;
+		font-family: NHG_Bd;
+		font-weight: 100;
+		text-decoration: none;
+		text-transform: uppercase;
+	 }
+
+	 .highScoreB {
+	 	cursor: pointer;
+	 }
+
+
+	.easyTime1text, .easyMoves1text, .easyName1text,
+	.normalTime1text, .normalMoves1text, .normalName1text,
+	.hardTime1text, .hardMoves1text, .hardName1text {
+		color: #0077C0;
+	}

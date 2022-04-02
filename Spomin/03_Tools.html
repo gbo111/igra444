@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Security-Policy"
+				content="default-src 'self' data: gap: 'unsafe-eval' ws: ;
+				style-src 'self' 'unsafe-inline' *.fontawesome.com;
+				script-src 'self' 'unsafe-eval';
+				media-src 'none';
+				font-src 'self' *.fontawesome.com;
+				connect-src 'self';
+				img-src 'self' data: content:;">
+	<title>Memory Game</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/Start.css"> -->
+		<link rel="stylesheet" href="css/tools.css">
+		<link rel="stylesheet" href="css/highScore.css">
+		<link rel="stylesheet" href="css/toolsMediaQ .css">
+		<link rel="stylesheet" href="css/nav.css">
+
+
+</head>
+<body>
+
+   <div id="preloader" ></div>
+
+	 <div class="highScore" id="highScore">
+	  <button class="closeHS" id="closeHS"><i class="highScore-icon fas fa-times"></i></button>
+
+	 		<h1 class="highScoreName" id="highScoreName">High Score</h1>
+
+	 	 <div class="HSlists">
+	 		 <p>EASY Mode TOP 3</p>
+	 		<ul>
+	 		 <li class="easyTime1text" id="easyTime1text"></li> <li class="easyTime1" id="easyTime1"></li>
+	 		 <li class="easyMoves1text" id="easyMoves1text"></li> <li class="easyMoves1" id="easyMoves1"></li>
+	 		 <li class="easyName1text" id="easyName1text"></li><li class="easyName1" id="easyName1"></li>
+	 	 </ul>
+
+	 	 <p>NORMAL Mode TOP 3</p>
+	 	 <ul>
+	 		<li class="normalTime1text" id="normalTime1text"></li> <li class="normalTime1" id="normalTime1"></li>
+	 		<li class="normalMoves1text" id="normalMoves1text"></li> <li class="normalMoves1" id="normalMoves1"></li>
+	 		<li class="normalName1text" id="normalName1text"></li><li class="normalName1" id="normalName1"></li>
+	 	</ul>
+
+	 	 <p>HARD Mode TOP 3</p>
+	 	<ul>
+	 	 <li class="hardTime1text" id="hardTime1text"></li> <li class="hardTime1" id="hardTime1"></li>
+	 	 <li class="hardMoves1text" id="hardMoves1text"></li> <li class="hardMoves1" id="hardMoves1"></li>
+	 	 <li class="hardName1text" id="hardName1text"></li><li class="hardName1" id="hardName1"></li>
+	  </ul>
+	 </div>
+	 </div>
+
+ <div class="border" id="border">
+
+	 <nav id="nav">
+		<button class="toggle" id="toggle">
+			 <i class="fas fa-bars"></i>
+			 <i class="fas fa-times"></i>
+		</button>
+
+		<ul>
+			 <li><a href="02_Play.html" class="play">Play</a></li>
+			 <li><a href="#" class="tools">Tools</a></li>
+			 <li><a class="highScoreB" id="highScoreB">HighScore</a></li>
+		</ul>
+
+	 </nav>
+
+
+	 <div class="mainContainer" id="mainContainer">
+
+
+  <div class="display" id="display">
+
+   <div class="left">
+	  	<div  class="description" id="description"><p>
+			O tekmovanju <br><br>
+      Unior je eno največjih slovenskih podjetij in eden največjih zaposlovalcev v Sloveniji.
+			Sodelujemo z najpomembnejšimi globalnimi proizvajalci visokotehnoloških rešitev ter se s
+			številnimi projekti izjemno radi povezujemo z izobraževalnimi ustanovami. Z njimi želimo prenašati svoje znanje,
+			izkušnje in rešitve neposredno na šolarje, jih z raznolikimi projekti spodbuditi, praktično izobraziti, ter jim z
+			vpogledom v prakso pomagati pri izbiri prihodnje poklicne in karierne poti.</p></div>
+   </div>
+
+   <div class="right">
+  	<img class="displayImage" id="displayImage" src="img/K-01_Front.svg" alt="dK">
+  </div>
+
+	</div>
+
+	<!-- <div class="containerScroll" id="containerScroll"> -->
+    <div class="container" id="container">
+
+  <img class="image" id="image0" src="img/K-01_Front.svg" alt="K">
+	<img class="image" id="image1" src="img/K-03.svg" alt="K">
+	<img class="image" id="image2" src="img/K-04.svg" alt="K">
+	<img class="image" id="image3" src="img/K-06.svg" alt="K">
+	<img class="image" id="image4" src="img/K-09.svg" alt="K">
+	<img class="image" id="image5" src="img/K-10.svg" alt="K">
+	<img class="image" id="image6" src="img/K-13.svg" alt="K">
+	<img class="image" id="image7" src="img/K-16.svg" alt="K">
+	<img class="image" id="image8" src="img/K-17.svg" alt="K">
+	<img class="image" id="image9" src="img/K-22.svg" alt="K">
+	<img class="image" id="image10" src="img/K-23.svg" alt="K">
+	<img class="image" id="image11" src="img/K-24.svg" alt="K">
+	<img class="image" id="image12" src="img/K-25.svg" alt="K">
+	<img class="image" id="image13" src="img/K-26.svg" alt="K">
+	<img class="image" id="image14" src="img/K-33.svg" alt="K">
+	<img class="image" id="image15" src="img/K-34.svg" alt="K">
+	<img class="image" id="image16" src="img/K-35.svg" alt="K">
+
+</div>
+
+   <div class="empty" id="empty"><p>blabla</p></div>
+
+</div>
+</div>
+
+
+
+
+<script type="text/javascript" src="js/tools.js"></script>
+<script type="text/javascript" src="js/highScore.js"></script>
+
+</body>
+</html>

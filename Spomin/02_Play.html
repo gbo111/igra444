@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Security-Policy"
+				content="default-src 'self' data: gap: 'unsafe-eval' ws: ;
+				style-src 'self' 'unsafe-inline' *.fontawesome.com;
+				script-src 'self' 'unsafe-eval' *.googleapis.com;
+				font-src 'self' *.fontawesome.com;
+				connect-src 'self';
+				img-src 'self' data: content:;">
+	<title>Memory Game</title>
+	  <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/app.css">
+		<link rel="stylesheet" href="css/appMediaQ.css">
+		<!-- <link rel="stylesheet" href="css/highScore.css"> -->
+		<link rel="stylesheet" href="css/nav.css">
+		<link rel="shortcut icon" href="#" />
+
+</head>
+<body>
+
+   <div id="preloader" ></div>
+
+
+   <div class="border" id="border">
+
+
+
+		 <nav id="nav">
+		 	<button class="toggle" id="toggle">
+		 		 <i class="fas fa-bars"></i>
+		 		 <i class="fas fa-times"></i>
+		  </button>
+
+		 	<ul>
+		 		 <li><a href="#" class="play">Play</a></li>
+		 		 <li><a href="03_Tools.html" class="tools">Tools</a></li>
+		 		 <li><a class="highScoreB" id="highScoreB">HighScore</a></li>
+		 	</ul>
+
+		 </nav>
+
+	<div class="container" id="container">
+
+		<div class="highScore" id="highScore">
+		 <button class="closeHS" id="closeHS"><i class="highScore-icon fas fa-times"></i></button>
+
+				<h1 class="highScoreName" id="highScoreName">High Scores</h1>
+
+         <div class="HSlists">
+				 <p>EASY Mode TOP 3</p>
+				<ul>
+				 <li class="easyTime1text" id="easyTime1text"></li> <li class="easyTime1" id="easyTime1"></li>
+				 <li class="easyMoves1text" id="easyMoves1text"></li> <li class="easyMoves1" id="easyMoves1"></li>
+				 <li class="easyName1text" id="easyName1text"></li><li class="easyName1" id="easyName1"></li>
+			 </ul>
+
+			 <p>NORMAL Mode TOP 3</p>
+			 <ul>
+				<li class="normalTime1text" id="normalTime1text"></li> <li class="normalTime1" id="normalTime1"></li>
+				<li class="normalMoves1text" id="normalMoves1text"></li> <li class="normalMoves1" id="normalMoves1"></li>
+				<li class="normalName1text" id="normalName1text"></li><li class="normalName1" id="normalName1"></li>
+			</ul>
+
+			 <p>HARD Mode TOP 3</p>
+			<ul>
+			 <li class="hardTime1text" id="hardTime1text"></li> <li class="hardTime1" id="hardTime1"></li>
+			 <li class="hardMoves1text" id="hardMoves1text"></li> <li class="hardMoves1" id="hardMoves1"></li>
+			 <li class="hardName1text" id="hardName1text"></li><li class="hardName1" id="hardName1"></li>
+		 </ul>
+
+    </div>
+	 </div>
+
+
+
+		<div class = "dashboard" id = "dashboard">
+
+			<div class="dashboard-element1">
+				<div class="time">
+				<i class=" dashboard-icon fas fa-stopwatch"></i> <span id="timer"></span> &nbsp; <i class=" dashboard-icon fas fa-clone"></i> <span id="moves"></span>
+				</div>
+
+		    </div>
+			<div class="dashboard-element2">
+				<div class="logo">
+		            <img src="img/Unior_Logo-01.svg" alt="logo" />
+		        </div>
+		    </div>
+			<div class="dashboard-element3">
+			    <i id = "reset" class="fas fa-redo-alt"></i>
+		    </div>
+
+		 </div>
+
+
+		    <div id="form">
+			   <input type="radio" id="easyMode"
+			   name="difficulty" value="easy">
+			   <label for="easyMode">Easy</label>
+			   <input type="radio" id="normalMode"
+			   name="difficulty" value="normal" checked="checked">
+			   <label class="checked" for="normalMode">Normal</label>
+			   <input type="radio" id="hardMode"
+			   name="difficulty" value="hard">
+			   <label for="hardMode">Hard</label>
+		    </div>
+
+
+		  <div class="game-board" id="game-board">
+		</div>
+	</div>
+	</div>
+
+
+
+
+
+	<div class="modal">
+		<div class="modal-inner">
+
+			<h2>Čestitke!</h2>
+			<p class="modal-text1"><h4>Rešeno v &nbsp;<i class="fas fa-stopwatch"></i> <span id="final-time"> </span> in &nbsp; <i class="fas fa-clone"></i> <span id="final-moves"></span>. potezah</h4></p>
+
+
+            <form id="myForm" name="myForm"  method="GET">
+                <label for="name">Ime in priimek:</label>
+                <input type="text" id="name" name="name" required/><p>
+
+				<label for="šola">Šola:</label>
+                <input type="text" id="sola" name="sola" required/><p>
+
+				<label for="mail">Email:</label>
+                <input type="text" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="mail" required/><p>
+
+				<input type="checkbox" id="GDPR" name="GDPR" required/>
+				<span><label class="cb" for="GDPR">Strinjam se s pogoji GDPR</label><br>
+
+				<input type="checkbox" id="mailing" name="mailing" required/>
+				<span><label class="cb" for="mailing">Želim prejemati e-novice</label><br>
+
+								<button type="submit" id="submit">Submit</button>
+            </form>
+
+
+
+			<p class="modal-text" id="replay"> <i class="fas fa-redo-alt"></i> Ponovni poskus? </p>
+		</div>
+	</div>
+
+  <div class="timer2" id="timer2">
+	</div>
+	<div class="timer3" id="timer3">
+	</div>
+
+	<!-- <style> .timer2, .timer3 {visibility: hidden;}</style> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	 <script type="text/javascript" src="js/app.js"></script>
+	 <script type="text/javascript" src="js/highScore.js"></script>
+	 <!-- integrity="sha256-tEw3ixxyWtO/B3zsQuEO/ilm/OCIMkqHfJF61teENp8="  -->
+	 <script type="text/javascript" src="libraries/p5.js"></script>
+	 <script type="text/javascript" src="sketch.js"></script>
+
+
+</body>
+</html>
