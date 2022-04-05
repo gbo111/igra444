@@ -1,3 +1,5 @@
 cd /d/Upwork/2022/01_Januar/5.1.2022_Unior_Memory/0000_Pop_02
 
 nodemon 
+
+"start": "node index.js"

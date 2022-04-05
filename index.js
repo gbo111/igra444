@@ -137,7 +137,9 @@ app.post('/api', (request, response) => {
      moves: body.m2,
      name: body.name,
      sola: body.sola,
-     mail: body.mail
+     mail: body.mail,
+     gdpr: body.gdpr,
+     mailing: body.mailing
 
      });
 
@@ -155,7 +157,9 @@ app.post('/api', (request, response) => {
       moves: body.m2,
       name: body.name,
       sola: body.sola,
-      mail: body.mail
+      mail: body.mail,
+      gdpr: body.gdpr,
+      mailing: body.mailing
 
       });
    } if ((body.timeEnd == (body.timeRe) ||
@@ -170,7 +174,9 @@ app.post('/api', (request, response) => {
          moves: body.m2,
          name: body.name,
          sola: body.sola,
-         mail: body.mail
+         mail: body.mail,
+         gdpr: body.gdpr,
+         mailing: body.mailing
 
          });
 
@@ -186,7 +192,7 @@ app.post('/api', (request, response) => {
     timeEnd:  body.time,
     timeFinal: body.timeF,
     timeRe: body.timeStampEnd - body.timeStampStart,
-    moves1: body.m1
+    moves1: body.m1,
 
 
   });

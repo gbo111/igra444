@@ -21,6 +21,7 @@ nav {
 	height: 100vh;
 	transform: translateX(-100%);
 	z-index: 1;
+	user-select: none;
 	 /* -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); */
 }
 
@@ -61,6 +62,7 @@ nav.active a {
 nav a:hover {
 	color: #E4032E;
 }
+
 
 button {
 	z-index: 100;

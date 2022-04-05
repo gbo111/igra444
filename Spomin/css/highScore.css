@@ -5,82 +5,87 @@
 	font-weight: 100;
 }
 
+
+@font-face {
+	font-family: 'NHG_Md';
+	src: url(/font/NHaasGroteskTXPro-65Md.ttf);
+	font-style: normal;
+	font-weight: 100;
+}
+
+  /* ////HIGHSCORE */
+
 .highScore {
 	  visibility: hidden;
-	  display:flex;
-		justify-content: center;
-		align-items: center;
-		margin: 0;
-		/* flex-flow: column nowrap; */
-
-		/* padding-top: 7em;
-		padding-right: 2em; */
-		/* max-width: 1000px; */
+		display:flex;
 		width: 100%;
 		height: 100vh;
 	  background-color: white;
 		position: fixed;
-		padding: 0;
-		/* height: 100vh; */
-		 z-index: 100;
-		 top: 0;
-	  left: 0;
-		/* transform: translateX(-100%); */
-	}
-
-	.HSlists {
-		position: absolute;
-		top: 0;
-		display:flex;
-		flex-flow: column nowrap;
-		padding-top: 4em;
-		margin: auto;
-		/* padding-right: 4em; */
-		width: 100%;
-	}
-
-
-
-	.closeHS {
-		border: none;
-		font-size: 20px;
-		 /* padding: 0 15px;  */
-		position: absolute;
-		top: 0;
-		right: 0;
-		/* transform: translateX(100%); */
-		cursor: pointer;
-		z-index: 500;
+		 z-index: 500;
+		 user-select: none;
+		 /* top: 0;
+	  left: 0; */
+		transform: translateX(-100%);
 
 	}
-
 	.highScore.active {
 		visibility: visible;
-		 /* transform: translateX(-50%) */
+		 transform: translateX(0)
 		}
 
+	.HSlists {
+		display:flex;
+		flex-flow: column nowrap;
+		width: 100%;
+		 margin: 3vh auto;
+	}
 
-
-  /* .highContainer {
-		width: 50%;
-	} */
-
-
-  .highScoreName{
+	.highScoreName{
 		color: #0077C0;
 		border: none;
-		align-self: center;
-		/* padding: 0 2em; */
-		position: absolute;
-		top: 0;
-		right: 50%;
-		transform: translateX(50%);
-	  font-size: 30px;
+    text-align: center;
+		font-size: 4vh;
 		font-family: NHG_Bd;
 		font-weight: 100;
 		text-decoration: none;
 		text-transform: uppercase;
 	}
+
+	.top3 {
+		display:flex;
+		flex-flow: column nowrap;
+		width: 100%;
+		/* padding: 1vh 0; */
+		/* justify-content:center;
+		align-items: center; */
+		/* margin: auto; */
+
+	}
+
+	.closeHS {
+		border: none;
+		font-size: 20px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		cursor: pointer;
+		margin: 10px 20px;
+	}
+
+
+
+	.highScore p {
+	 display:flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	margin: -1vh 0;
+	padding:  0;
+	font-size: 2.5vh;
+	font-family: NHG_Bd;
+	font-weight: 100;
+	text-decoration: none;
+ }
 
    .highScore ul {
     color: #545454;
@@ -88,36 +93,19 @@
  	  flex-flow: row nowrap;
 		justify-content: center;
 		width: 100%;
-		/* padding-top: 3em; */
-		/* padding-right: 1em; */
 		list-style-type: none;
-		/* background-color: red; */
     background: linear-gradient(90deg, white, #F5F5F5 40%);
 
- 	  font-size: 10px;
  		font-family: NHG_Bd;
  		font-weight: 100;
  		text-decoration: none;
- 		/* text-transform: uppercase; */
 		line-height: 1.8;
 	 }
 
 	 .highScore ul li {
-	   margin: 1em .5em;
-	 }
-
-	 .highScore p {
-    display:flex;
- 		/* padding-right: 1em; */
-		flex-flow: row nowrap;
-		justify-content: center;
-		margin: 0;
-    padding: 0;
-		font-size: 14px;
-		font-family: NHG_Bd;
-		font-weight: 100;
-		text-decoration: none;
-		text-transform: uppercase;
+	   margin: 1em 1vh;
+		 font-size: 2vh;
+		 font-family: NHG_Md;
 	 }
 
 	 .highScoreB {
@@ -130,3 +118,374 @@
 	.hardTime1text, .hardMoves1text, .hardName1text {
 		color: #0077C0;
 	}
+/* ///HS end */
+
+
+ @media screen and (orientation:landscape) and (max-height: 570px){
+
+	.highScoreName{
+		font-size: 25px;
+	}
+
+	.top3 {
+		width: 100%;
+		padding: 2vh 0;
+		overflow: scroll;
+	}
+
+	.closeHS {
+		font-size: 20px;
+	}
+
+	.highScore p {
+	margin: -1vh 0;
+	padding:  0;
+	font-size: 15px;
+	}
+
+	 .highScore ul {
+		line-height: 1.8;
+	 }
+
+	 .highScore ul li {
+		 margin: 1em .5em;
+		 font-size: 14px;
+	 }
+}
+
+@media screen and (orientation:portrait) {
+	.highScore ul li {
+		font-size: 2.5vw;
+	}
+
+	.highScoreName{
+		font-size: 3vw;
+	}
+
+	.top3 {
+		width: 100%;
+		padding: 2vw 0;
+		overflow: scroll;
+	}
+
+
+	.highScore p {
+	font-size: 2vw;
+	}
+
+	 .highScore ul li {
+		 font-size: 2.5vw;
+	 }
+}
+
+/* @media screen and (orientation:landscape) and (max-height: 530px){
+
+	.HSlists {
+		display:flex;
+		flex-flow: column nowrap;
+		padding-top: 2vh;
+		width: 100%;
+		line-height: 1;
+	}
+
+	.highScoreName{
+		padding: 3vh 0;
+		font-size: 3.4vh;
+	}
+
+	.top3 {
+		padding: 14.3vh 0;
+		width: 100%;
+	}
+
+
+	.highScore p {
+	margin: -2vh 0;
+	padding: 0;
+	font-size: 2.4vh;
+ }
+
+	 .highScore ul {
+		width: 100%;
+		line-height: 1.8;
+	 }
+
+	 .highScore ul li {
+		 margin: 1em .5em;
+		 font-size: 2.2vh;
+	 }
+}
+
+@media screen and (orientation:landscape) and (max-height: 470px){
+
+	.HSlists {
+		display:flex;
+		flex-flow: column nowrap;
+		padding-top: 2vh;
+		padding-bottom: 4vh;
+		width: 100%;
+		line-height: 1;
+	}
+
+	.highScoreName{
+		padding: 2vh 0;
+		font-size: 3.4vh;
+	}
+
+	.top3 {
+		padding: 15vh 0;
+		width: 100%;
+	}
+
+
+	.highScore p {
+	margin: -1em 0;
+	padding: 0;
+	font-size: 2.4vh;
+ }
+
+	 .highScore ul {
+		width: 100%;
+		line-height: 1.8;
+	 }
+
+	 .highScore ul li {
+		 margin: 1em .5em;
+		 font-size: 2.4vh;
+	 }
+}
+
+@media screen and (orientation:landscape) and (max-height: 410px){
+
+	.HSlists {
+		display:flex;
+		flex-flow: column nowrap;
+		padding-top: 4vh;
+		width: 100%;
+		line-height: 1;
+	}
+
+	.highScoreName{
+		padding: 1vh 0;
+		font-size: 4vh;
+	}
+
+	.top3 {
+		padding: 5vh 0;
+		width: 100%;
+	}
+
+
+	.highScore p {
+	margin: -3vh 0;
+	padding: 0;
+	font-size: 2.8vh;
+ }
+
+	 .highScore ul {
+		width: 100%;
+		line-height: 1.5;
+	 }
+
+	 .highScore ul li {
+		 margin: 1em .5em;
+		 font-size: 3vh;
+	 }
+}
+
+@media screen and (orientation:landscape) and (max-height: 350px){
+
+	.HSlists {
+		display:flex;
+		flex-flow: column nowrap;
+		padding-top: 12vh;
+		padding-bottom: 0;
+		width: 100%;
+		line-height: 1;
+	}
+
+	.highScoreName{
+		padding: 1vh 0;
+		font-size: 4vh;
+	}
+
+	.top3 {
+		padding: 6vh 0;
+		width: 100%;
+	}
+
+
+	.highScore p {
+	margin: -4vh 0;
+	padding: 0;
+	font-size: 3vh;
+ }
+
+	 .highScore ul {
+		width: 100%;
+		line-height: 1.5;
+	 }
+
+	 .highScore ul li {
+		 margin: 1em .5em;
+		 font-size: 3.5vh;
+	 }
+}
+
+@media screen and (orientation:landscape) and (max-height: 300px){
+
+	.HSlists {
+		display:flex;
+		flex-flow: column nowrap;
+		padding-top: 12vh;
+		width: 100%;
+		line-height: 1;
+	}
+
+	.highScoreName{
+		padding: 1vh 0;
+		font-size: 4vh;
+	}
+
+	.top3 {
+		padding: 6vh 0;
+		width: 100%;
+	}
+
+
+	.highScore p {
+	margin: -5vh 0;
+	padding: 0;
+	font-size: 3vh;
+ }
+
+	 .highScore ul {
+		width: 100%;
+		line-height: 1.5;
+	 }
+
+	 .highScore ul li {
+		 margin: 1em .5em;
+		 font-size: 3.5vh;
+	 }
+} */
+
+/* ////portrait */
+
+/* @media screen and (orientation:portrait) and (max-width: 600px){
+
+	.HSlists {
+		display:flex;
+		flex-flow: column nowrap;
+		padding-bottom: 10vh;
+		padding-top: 0;
+		width: 100%;
+		line-height: 1;
+	}
+
+	.highScoreName{
+		padding: 6vh 0;
+		font-size: 3vh;
+	}
+
+	.top3 {
+		padding: 0 0;
+		width: 100%;
+	}
+
+
+	.highScore p {
+	margin: 0 0;
+	padding: 0;
+	font-size: 2vh;
+ }
+
+	 .highScore ul {
+		width: 100%;
+		line-height: 1.8;
+	 }
+
+	 .highScore ul li {
+		 margin: 1em .5em;
+		 font-size: 1.8vh;
+	 }
+}
+
+
+
+@media screen and (orientation:portrait) and (max-width: 540px){
+
+	.HSlists {
+		display:flex;
+		flex-flow: column nowrap;
+		padding-top: 0;
+		padding-bottom: 20vh;
+		width: 100%;
+		line-height: 1;
+	}
+
+	.highScoreName{
+		padding: 6vh 0;
+		font-size: 2.8vh;
+	}
+
+	.top3 {
+		padding: 0 0;
+		width: 100%;
+	}
+
+
+	.highScore p {
+	margin: 0 0;
+	padding: 0;
+	font-size: 1.8vh;
+ }
+
+	 .highScore ul {
+		width: 100%;
+		line-height: 1.8;
+	 }
+
+	 .highScore ul li {
+		 margin: 1em .5em;
+		 font-size: 1.4vh;
+	 }
+}
+@media screen and (orientation:portrait) and (max-width: 440px){
+
+	.HSlists {
+		display:flex;
+		flex-flow: column nowrap;
+		padding-top: 0;
+		padding-bottom: 26vh;
+		width: 100%;
+		line-height: 1;
+	}
+
+	.highScoreName{
+		padding: 4vh 0;
+		font-size: 2.4vh;
+	}
+
+	.top3 {
+		padding: 0 0;
+		width: 100%;
+	}
+
+
+	.highScore p {
+	margin: 0 0;
+	padding: 0;
+	font-size: 1.4vh;
+ }
+
+	 .highScore ul {
+		width: 100%;
+		line-height: 1.8;
+	 }
+
+	 .highScore ul li {
+		 margin: 1em .5em;
+		 font-size: 1.4vh;
+	 }
+} */

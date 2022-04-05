@@ -1,13 +1,12 @@
 
 html,body {
 	background: white;
-    /* display: flex;
-	margin: auto; */
+	width: 100%;
   height: 100vh;
-	margin: 0;
+	margin: auto;
   padding: 0;
   overflow: hidden;
-
+ user-select: none;
 
 }
 
@@ -59,11 +58,9 @@ html,body {
 
 .mainContainer{
 	background: #0077C0;
-  padding-top: 4em;
+  padding-top: 10vh;
   margin: auto;
   width: 100%;
-
-
 }
 
 .tools {
@@ -71,49 +68,45 @@ html,body {
 }
 
 
-
 .display {
    display: flex;
 	 flex-direction: row;
 	 align-items: center;
  	justify-content: center;
+	margin: auto;
 	background: #0077C0;
+	width: 100%;
 }
 
 
 .left {
-  width: 300px;
+  width: 40vh;
+	height: 40vh;
  background:#f0f5fd;
- /* min-height: 300px; */
  border-radius: 4%;
  outline: 5px solid white;
-/* min-height: 300px; */
- /* padding-left: 25px; */
 
 }
 
 .right {
- align-items: center;
- justify-content: center;
- padding-left: 25px;
- /* padding-top: 5px; */
+ /* align-items: center;
+ justify-content: center; */
+ padding-left: 3vw;
+ width: 40vh;
 }
 
 .description {
 width: 100%;
-height: 300px;
+height: 40vh;
 display: flex;
  justify-content: center;
- /* align-items: center; */
  padding: 8%;
  color: #383838;
- /* color: #585858; */
  font-size: 14px;
  font-family: NHG_Md;
  font-weight: 100;
  text-decoration: none;
- text
-	letter-spacing: .5px;
+ letter-spacing: .5px;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
@@ -121,28 +114,24 @@ display: flex;
 
 .displayImage{
 	margin: auto;
-  width:300px;
+	width:inherit;
   background: white;
 	border-radius: 8%;
 	outline: 5px solid white;
 }
 
 
-
 .container {
 
+  margin-top: 1vh;
 	display: flex;
 	overflow-x: auto;
 	overflow-y: hidden;
 	white-space: nowrap;
-	/* width: 84%; */
-  height: 12em;
+  height: 22vh;
   width: 90%;
 	margin: auto;
 	-webkit-overflow-scrolling: touch;
-	/* margin: auto; */
-	/* background: linear-gradient(90dag, darkblue, darkorchid,) border-box; */
-
 	 -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent),
 	                     linear-gradient( transparent 85%, #000 85%);
 
@@ -150,7 +139,7 @@ display: flex;
 
 .image {
    align-self: center;
-	 width: 8em;
+	 width: 16vh;
 	background: white;
 
 	margin: 2vh;
@@ -177,9 +166,6 @@ display: flex;
 	 filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
 }
 
-/* img{
-
-} */
 
 .empty {
 	background: #0077C0
@@ -187,5 +173,9 @@ display: flex;
 
 #empty p {
 	visibility: hidden;
-	margin-top: 0px;
+	margin-top: 200px;
 }
+
+
+
+/* /////MQ */
