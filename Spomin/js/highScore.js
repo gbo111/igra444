@@ -74,7 +74,7 @@ async function getHSeasy() {
 			easyTime.textContent = `${item.time}`;
 			easyMovestext.textContent = `MOVES:`;
 			easyMoves.textContent = `${item.moves}`;
-			easyNametext.textContent = `#:`;
+			easyNametext.textContent = `PLAYER:`;
 			easyName.textContent = `${item.nick}`;
 			// easyScore.textContent = `'TIME' ${item.time} 'MOVES'${item.moves} 'NAME'${item.name}`;
 
@@ -132,7 +132,7 @@ async function getHSnormal() {
 		 normalTime.textContent = `${item.time}`;
 		 normalMovestext.textContent = `MOVES:`;
 		 normalMoves.textContent = `${item.moves}`;
-		 normalNametext.textContent = `#:`;
+		 normalNametext.textContent = `PLAYER:`;
 		 normalName.textContent = `${item.nick}`;
 		 // easyScore.textContent = `'TIME' ${item.time} 'MOVES'${item.moves} 'NAME'${item.name}`;
 
@@ -192,7 +192,7 @@ async function getHShard() {
 		 hardTime.textContent = `${item.time}`;
 		 hardMovestext.textContent = `MOVES:`;
 		 hardMoves.textContent = `${item.moves}`;
-		 hardNametext.textContent = `#:`;
+		 hardNametext.textContent = `PLAYER:`;
 		 hardName.textContent = `${item.nick}`;
 		 // easyScore.textContent = `'TIME' ${item.time} 'MOVES'${item.moves} 'NAME'${item.name}`;
 

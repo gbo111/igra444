@@ -4,7 +4,6 @@ const Datastore = require('nedb');
 const app = express();
 require('dotenv').config();
 
-console.log(process.env);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {console.log('Starting server at ${port}')});
@@ -88,7 +87,7 @@ app.post('/api', (request, response) => {
       databaseEasy.insert({
       time: body.timeFinal,
       moves: body.m2,
-      nickname: body.nick
+      nick: body.nick
 
       });
 
@@ -104,7 +103,7 @@ app.post('/api', (request, response) => {
        databaseNormal.insert({
        time: body.timeFinal,
        moves: body.m2,
-       nickname: body.nick
+       nick: body.nick
 
        });
     } if ((body.timeEnd == (body.timeRe) ||
@@ -117,7 +116,7 @@ app.post('/api', (request, response) => {
           databaseHard.insert({
           time: body.timeFinal,
           moves: body.m2,
-          nickname: body.nick
+          nick: body.nick
 
           });
 
@@ -136,7 +135,7 @@ app.post('/api', (request, response) => {
      time: body.timeFinal,
      moves: body.m2,
      name: body.name,
-     nickname: body.nick,
+     nick: body.nick,
      sola: body.sola,
      mail: body.mail,
      gdpr: body.gdpr,
@@ -157,7 +156,7 @@ app.post('/api', (request, response) => {
       time: body.timeFinal,
       moves: body.m2,
       name: body.name,
-      nickname: body.nick,
+      nick: body.nick,
       sola: body.sola,
       mail: body.mail,
       gdpr: body.gdpr,
@@ -175,7 +174,7 @@ app.post('/api', (request, response) => {
          time: body.timeFinal,
          moves: body.m2,
          name: body.name,
-         nickname: body.nick,
+         nick: body.nick,
          sola: body.sola,
          mail: body.mail,
          gdpr: body.gdpr,
