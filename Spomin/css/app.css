@@ -12,12 +12,12 @@ body {
 	/* background: #3694CD; */
 	/* background: -webkit-linear-gradient(to bottom, white 80px, #3694CD 80.1px);
   background: linear-gradient(to bottom, white 80px, #3694CD 80.1px); */
-	/* font-family: Myriad Pro;  */
 	font-family: NHG_Bd;
 }
 
 * {
 	box-sizing: border-box;
+	user-select: none;
 }
 
 
@@ -68,8 +68,9 @@ body {
 	/* height: 100vh; */
 	/* max-width: 900px; */
 	background: -webkit-linear-gradient(to bottom, white 20%, white 21%, #3694CD 22%);
-	background: linear-gradient(to bottom, white 82px,  #3694CD 83px);
+	background: linear-gradient(to bottom, white 90px,  #3694CD 90px);
 	/* background: white; */
+	position: relative;
 }
 
 
@@ -85,40 +86,26 @@ h3 {
 /*Styles for dashboard*/
 
 .dashboard {
-	/* padding-top: 40px; */
+	padding: 4px 0;
 	color: #545454;
-	font-family: Myriad Pro;
-	font-size: 1.5rem;
+	font-size: 14px;
+	font-family: NHG_Md;
 	margin: 0 auto;
-	/* padding-top: .5rem; */
-	width: 86%;
+	width: 100%;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 
- .dashboard-element1, .dashboard-element3 {
-    flex: 1;
-    display: flex;
-    min-width: -webkit-min-content;
-
-}
-
-
-  .dashboard-element3 {
-   justify-content: flex-end;
-	 font-size: 1.3rem;
-
-}
 
  .time{
 	user-select: none;
-
 }
 
 
 .dashboard-icon {
-	font-size: 1.5rem;
-	padding-top: .5rem;
+	font-size: 14px;
+	/* padding-top: .5rem; */
 }
 
 
@@ -137,15 +124,32 @@ h3 {
 
 
 .logo {
-	width: 140px;
-	max-width: 140px;
-	margin-top: .5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	width: 100%;
+	padding-top: 4px;
 }
 
-#reset {
+.logo img {
+	width: 140px;
+}
+
+.resetB {
+	border: none;
+	font-size: 20px;
+	padding: 10px 0 0 15px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
 	cursor: pointer;
-	margin: auto 0;
-	/* padding-top: .5rem; */
+}
+
+ #reset {
+	margin: 0 15px 10px 0;
+
 }
 
 /*Styles for the difficulty select buttons*/
@@ -153,7 +157,7 @@ h3 {
 #form {
 	 display: flex;
 	justify-content: space-between;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 #form input {
@@ -165,7 +169,7 @@ h3 {
 	display: inline-block;
 	cursor: pointer;
 	text-align: center;
-	line-height: 40px;
+	line-height: 35px;
 	margin: 0;
 	padding: 0;
 	background:  #0077C0;
@@ -197,7 +201,7 @@ h3 {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	padding: 3%;
+	padding: 2%;
 
 }
 
@@ -221,6 +225,7 @@ h3 {
     justify-content: space-around;
     align-items: center;
     border-radius: 8%;
+		border-collapse: separate;
     color: #0077C0;
 	cursor: pointer;
 	outline: 2px solid white;
@@ -404,6 +409,6 @@ color: #0077C0;
 
 }
 
-  .hide {
+   .hide {
    display: none;
 }

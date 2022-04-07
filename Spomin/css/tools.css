@@ -84,6 +84,7 @@ html,body {
 	height: 40vh;
  background:#f0f5fd;
  border-radius: 4%;
+ border-collapse: separate;
  outline: 5px solid white;
 
 }
@@ -117,6 +118,7 @@ display: flex;
 	width:inherit;
   background: white;
 	border-radius: 8%;
+	border-collapse: separate;
 	outline: 5px solid white;
 }
 
@@ -144,6 +146,7 @@ display: flex;
 
 	margin: 2vh;
 	border-radius: 8%;
+	border-collapse: separate;
 	outline: .4vh solid white;
 
 	 cursor: pointer;
@@ -154,6 +157,7 @@ display: flex;
 .img-selected {
 
   border-radius: 10%;
+	border-collapse: separate; 
 	outline: 1vh solid white;
 	image-rendering: auto;
 	image-rendering: crisp-edges;

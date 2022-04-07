@@ -48,288 +48,38 @@
 		font-size: 15px;
 	}
 }
-/* @media screen and (max-height:490px){
-
-
- .modal label {
-	 margin: 5px 0;
-	 width: 30%;
-	 font-size: 2vh;
- }
-
-
-
- label.cb {
-	 font-size: 2vh;
-	 width: 100vh;
-	 margin: 2px 0;
- }
-
-
- h2 {
-	 font-size: 3vh;
- }
-
- h4 {
-	 font-size: 2.5vh;
- }
-
- .modal button {
- margin: 10px 0;
- width: 100px;
- font-size: 2vh;
- }
-
- .modal-text {
-	 font-size: 2.5vh;
- }
-
-} */
 
 
 
 
 
 /* ////GLOBAL */
- @media screen and (max-width: 956px) {
-
-	.container {
-		background: -webkit-linear-gradient(to bottom, white 20%, white 21%, #3694CD 22%);
-		background: linear-gradient(to bottom, white 82px,  #3694CD 82px);
-	}
-}
-
-/* @media screen and (max-width: 764px) {
-
- .container {
-	 background: -webkit-linear-gradient(to bottom, white 20%, white 21%, #3694CD 22%);
-	 background: linear-gradient(to bottom, white 82px,  #3694CD 83px);
- }
-} */
-
-/* @media screen and (max-width: 664px) {
-
- .container {
-	 background: -webkit-linear-gradient(to bottom, white 20%, white 21%, #3694CD 22%);
-	 background: linear-gradient(to bottom, white 88px,  #3694CD 89px);
- }
-} */
-
-
- @media screen and (max-width: 780px) {
-
-.dashboard {
-	width: 84%;
-}
-
-.logo {
-	width: 140px;
-}
-
-.dashboard-icon {
-	font-size: 1.2rem;
-}
-
-#timer{
-  font-size: 1.2rem;
-	margin: auto .2rem;
-}
-
-#moves{
-  font-size: 1.2rem;
-	margin: auto .2rem;
-}
-
-#reset {
- font-size: 1.1rem;
-}
-}
-
-
-@media screen and (max-width: 580px) {
-
-	 .container {
- 	 background: -webkit-linear-gradient(to bottom, white 20%, white 21%, #3694CD 22%);
- 	 background: linear-gradient(to bottom, white 66px,  #3694CD 66px);
-  }
-
-.dashboard {
- width: 78%;
-}
-
-.logo {
- width: 100px;
-}
-
-.dashboard-icon {
- font-size: 1rem;
-}
-
-#timer{
- font-size: 1rem;
- margin: auto .15rem;
-}
-
-#moves{
- font-size: 1rem;
- margin: auto .15rem;
-}
-
-#reset {
-font-size: 1rem;
-}
-
-#form {
-	font-size: 14px;
-}
-
-#form label {
-	line-height: 30px;
-}
-
-}
-
-
-@media screen and (max-width: 500px) {
-
-	.container {
- 	 background: -webkit-linear-gradient(to bottom, white 20%, white 21%, #3694CD 22%);
- 	 background: linear-gradient(to bottom, white 58px,  #3694CD 58px);
-  }
-
-	/* .game-board.activeE {
-		width: 50%;
-	} */
-
-.dashboard {
- width: 78%;
-}
-
-.logo {
- width: 80px;
-}
-
-.dashboard-icon {
- font-size: .8rem;
-}
-
-#timer{
- font-size: .8rem;
- margin: auto .1rem;
-}
-
-#moves{
- font-size: .8rem;
- margin: auto .1rem;
-
-}
-
-#reset {
-font-size: 1rem;
-}
-
-#form {
-	font-size: 12px;
-}
-
-#form label {
-	line-height: 22px;
-}
-}
 
 
 
-@media screen and (max-width: 420px) {
-
-	.container {
- 	 background: -webkit-linear-gradient(to bottom, white 20%, white 21%, #3694CD 22%);
- 	 background: linear-gradient(to bottom, white 88px,  #3694CD 88px);
-  }
-
-.container {
-	padding-top: 30px;
-}
-
-.dashboard {
- width: 94%;
-}
-
-.logo {
- width: 80px;
-}
-
-.dashboard-icon {
- font-size: .8rem;
-}
-
-#timer{
- font-size: .8rem;
- margin: auto 2px;
-}
-
-#moves{
- font-size: .8rem;
- margin: auto 2px;
-
-}
-
-#reset {
-font-size: 12px;
-}
-}
 
 
 
 @media screen and (max-width: 320px) {
-
-	.container {
-	 background: -webkit-linear-gradient(to bottom, white 20%, white 21%, #3694CD 22%);
-	 background: linear-gradient(to bottom, white 85px,  #3694CD 85px);
-	}
-
 	.game-board.activeE {
 		width: 75%;
 	}
-
-.dashboard {
- width: 94%;
-}
-
-.logo {
- width: 60px;
- margin-top: .3rem;
-}
-
-.dashboard-icon {
- font-size: .8rem;
-}
-
-#timer{
- font-size: .8rem;
- margin: auto 2px;
-}
-
-#moves{
- font-size: .8rem;
- margin: auto 2px;
-
-}
-
-#reset {
-font-size: 10px;
-}
-
 }
 
 /* //////easy normal hard */
 
-@media screen and (max-width: 320px) and (orientation:portrait){
 
-	.easy {
-		padding-bottom: 40%;
-		width: 40%;
+@media screen and (max-width: 700px) and (orientation:portrait){
+	.hard {
+		padding-bottom: 20%;
+		width: 20%;
+	}
+
+	.game-board.activeH {
+	 width: 74%;
 	}
 }
+
 
 @media screen and (max-width: 440px) and (orientation:portrait){
 	.normal {
@@ -340,15 +90,11 @@ font-size: 10px;
 	 width: 82%;
 	}
 }
+@media screen and (max-width: 320px) and (orientation:portrait){
 
-@media screen and (max-width: 700px) and (orientation:portrait){
-	.hard {
-		padding-bottom: 20%;
-		width: 20%;
-	}
-
-	.game-board.activeH {
-	 width: 74%;
+	.easy {
+		padding-bottom: 40%;
+		width: 40%;
 	}
 }
 
@@ -370,6 +116,536 @@ font-size: 10px;
 
 /* ///////W 700 */
 
+
+
+
+
+
+
+
+
+/* /////landscape */
+
+@media screen and (orientation:landscape) and (max-height: 940px){
+	.game-board.activeE {
+	width: 96%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 910px){
+	.game-board.activeE {
+	width: 92%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 870px){
+	.game-board.activeE {
+	width: 88%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 835px){
+	.game-board.activeE {
+	width: 84%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 800px){
+	.game-board.activeE {
+	width: 80%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 770px){
+	.game-board.activeE {
+	width: 76%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 735px){
+	.game-board.activeE {
+	width: 72%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 715px){
+	.game-board.activeN {
+	width: 96%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 700px){
+	.game-board.activeE {
+	width: 68%;
+	}
+	.game-board.activeN {
+	width: 92%;
+	}
+  .game-board.activeH {
+	width: 92%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 665px){
+	.game-board.activeE {
+	width: 64%;
+	}
+	.game-board.activeN {
+	width: 88%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 640px){
+	.game-board.activeN {
+	width: 84%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 630px){
+	.game-board.activeE {
+	width: 60%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 615px){
+	.game-board.activeN {
+	width: 80%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 600px){
+	.easy {
+		padding-bottom: 10%;
+		width: 10%;
+		font-size: 3rem;
+	}
+	.game-board.activeE {
+	width: 100%;
+	}
+	.game-board.activeN {
+	width: 76%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 575px){
+	.game-board.activeH {
+	width: 96%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 565px){
+	.game-board.activeN {
+	width: 72%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 550px){
+	.game-board.activeH {
+	width: 92%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 535px){
+	.normal {
+		padding-bottom: 10%;
+		width: 10%;
+	}
+	.game-board.activeN {
+	width: 100%;
+ }
+	.game-board.activeH {
+	width: 88%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 510px){
+	.game-board.activeH {
+	width: 84%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 490px){
+	.game-board.activeH {
+	width: 80%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 475px){
+	.game-board.activeH {
+	width: 76%;
+	}
+}
+
+
+
+@media screen and (orientation:landscape) and (max-height: 460px){
+	.game-board.activeN {
+	width: 96%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 450px){
+	.game-board.activeH {
+	width: 72%;
+	}
+}
+
+
+
+@media screen and (orientation:landscape) and (max-height: 430px){
+	.game-board.activeH {
+	width: 68%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 425px){
+	.game-board.activeN {
+	width: 88%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 410px){
+	.game-board.activeH {
+	width: 64%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 395px){
+	.game-board.activeN {
+	width: 80%;
+	}
+	.game-board.activeH {
+	width: 60%;
+	}
+}
+
+@media screen and (orientation:landscape) and (max-height: 375px){
+	.game-board.activeN {
+	width: 76%;
+	}
+	.game-board.activeH {
+	width: 56%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 365px){
+	.game-board.activeN {
+	width: 72%;
+	}
+	.game-board.activeH {
+	width: 54%;
+	}
+}
+ @media screen and (orientation:landscape) and (max-height: 355px){
+	.normal {
+		padding-bottom: 6%;
+		width: 6%;
+	}
+	.game-board.activeN {
+	width: 100%;
+	}
+}
+@media screen and (orientation:landscape) and (max-height: 350px){
+	.game-board.activeH {
+	width: 50%;
+	}
+}
+
+@media screen and (orientation:landscape) and (max-height: 340px){
+	.easy {
+		padding-bottom: 10%;
+		width: 10%;
+		font-size: 3rem;
+	}
+	.game-board.activeE {
+	width: 100%;
+	}
+}
+
+
+
+
+
+
+
+/* ////850 */
+/* @media screen and (max-width: 896px) and (max-height: 414px){
+  .game-board.activeH {
+   width: 74%;
+  }
+} */
+@media screen and (max-width: 1370px) and (max-height: 920px){
+  .game-board.activeE {
+   width: 92%;
+  }
+}
+
+ @media screen and (max-width: 950px) and (max-height: 800px){
+   .game-board.activeN {
+    width: 96%;
+   }
+  .game-board.activeH {
+   width: 74%;
+  }
+}
+@media screen and (max-width: 915px) and (max-height: 412px){
+
+ .game-board.activeH {
+  width: 72%;
+ }
+}
+
+@media screen and (max-width: 850px) and (max-height: 800px){
+
+	.game-board.activeE {
+	 width: 90%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 750px){
+
+	.game-board.activeE {
+	 width: 86%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 720px){
+
+	.game-board.activeE {
+	 width: 82%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 715px){
+
+	.game-board.activeN {
+	 width: 100%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 690px){
+
+	.game-board.activeE {
+	 width: 78%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 660px){
+
+	.game-board.activeE {
+	 width: 74%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 635px){
+
+	.game-board.activeE {
+	 width: 70%;
+	}
+}
+
+
+
+
+@media screen and (max-width: 850px) and (max-height: 625px){
+
+	.game-board.activeN {
+	 width: 94%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 600px){
+  .easy {
+  	padding-bottom: 20%;
+  	width: 20%;
+  	font-size: 3rem;
+  }
+  .game-board.activeE {
+	 width: 66%;
+	}
+	.game-board.activeN {
+	 width: 90%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 575px){
+  .game-board.activeE {
+	 width: 62%;
+	}
+	.game-board.activeN {
+	 width: 86%;
+	}
+	.game-board.activeH {
+	 width: 100%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 550px){
+  .game-board.activeE {
+   width: 58%;
+  }
+	.game-board.activeN {
+	 width: 82%;
+	}
+	.game-board.activeH {
+	 width: 96%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 535px){
+  .easy {
+  	padding-bottom: 10%;
+  	width: 10%;
+  }
+  .normal {
+		padding-bottom: 14%;
+		width: 14%;
+	}
+  .game-board.activeE {
+   width: 100%;
+  }
+	.game-board.activeN {
+	 width: 78%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 505px){
+
+	.game-board.activeN {
+	 width: 74%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 480px){
+
+	.game-board.activeN {
+	 width: 70%;
+	}
+	.game-board.activeH {
+	 width: 92%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 465px){
+	.normal {
+		padding-bottom: 10%;
+		width: 10%;
+	}
+	.game-board.activeN {
+	 width: 100%;
+	}
+	.game-board.activeH {
+	 width: 88%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 445px){
+
+	.game-board.activeH {
+	 width: 84%;
+	}
+}
+
+
+@media screen and (max-width: 850px) and (max-height: 435px){
+
+	.game-board.activeH {
+	 width: 78%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 410px){
+
+	.game-board.activeH {
+	 width: 74%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 395px){
+  .game-board.activeE {
+   width: 100%;
+  }
+  .game-board.activeN {
+   width: 94%;
+  }
+	.game-board.activeH {
+	 width: 70%;
+	}
+}
+
+@media screen and (max-width: 850px) and (max-height: 380px){
+  .game-board.activeN {
+   width: 90%;
+  }
+	.game-board.activeH {
+	 width: 66%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 365px){
+
+	.game-board.activeN {
+	 width: 86%;
+	}
+	.game-board.activeH {
+	 width: 62%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 355px){
+
+	.game-board.activeN {
+	 width: 82%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 340px){
+
+	.game-board.activeN {
+	 width: 78%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 345px){
+
+	.game-board.activeH {
+	 width: 58%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 330px){
+
+	.game-board.activeN {
+	 width: 74%;
+	}
+	.game-board.activeH {
+	 width: 54%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 320px){
+
+	.game-board.activeN {
+	 width: 70%;
+	}
+}
+
+@media screen and (max-width: 850px) and (max-height: 310px){
+
+	.game-board.activeN {
+	 width: 66%;
+	}
+	.game-board.activeH {
+	 width: 50%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 300px){
+  .game-board.activeE {
+   width: 96%;
+  }
+	.game-board.activeN {
+	 width: 62%;
+	}
+	.game-board.activeH {
+	 width: 46%;
+	}
+}
+@media screen and (max-width: 850px) and (max-height: 395px){
+  .game-board.activeE {
+   width: 92%;
+  }
+}
+@media screen and (max-width: 850px) and (max-height: 285px){
+  .game-board.activeE {
+   width: 86%;
+  }
+	.game-board.activeN {
+	 width: 58%;
+	}
+	.game-board.activeH {
+	 width: 40%;
+	}
+}
+
+@media screen and (max-width: 750px) and (max-height: 360px){
+  .game-board.activeE {
+   width: 100%;
+  }
+  .game-board.activeN {
+   width: 96%;
+  }
+	.game-board.activeH {
+	 width: 74%;
+	}
+}
+
+@media screen and (max-width: 720px) and (max-height: 540px){
+  .game-board.activeE {
+   width: 70%;
+  }
+  .game-board.activeN {
+   width: 94%;
+  }
+	.game-board.activeH {
+	 width: 100%;
+	}
+}
+
+
+
 @media screen and (max-width: 700px) and (max-height: 950px){
 
 	.game-board.activeH {
@@ -383,7 +659,9 @@ font-size: 10px;
 	}
 }
 @media screen and (max-width: 700px) and (max-height: 845px){
-
+  .game-board.activeN {
+	 width: 100%;
+	}
 	.game-board.activeH {
 	 width: 62%;
 	}
@@ -391,15 +669,409 @@ font-size: 10px;
 @media screen and (max-width: 700px) and (max-height: 800px){
 
 	.game-board.activeH {
-	 width: 58%;
+	 width: 56%;
 	}
 }
-@media screen and (max-width: 700px) and (max-height: 750px){
+ @media screen and (max-width: 700px) and (max-height: 765px){
 
 	.game-board.activeH {
+	 width: 56%;
+	}
+}
+@media screen and (max-width: 700px) and (max-height: 740px){
+
+	.game-board.activeH {
+	 width: 52%;
+	}
+}
+@media screen and (max-width: 700px) and (max-height: 699px){
+
+	.game-board.activeE {
+	 width: 96%;
+	}
+}
+@media screen and (max-width: 700px) and (max-height: 693px){
+  .hard {
+  	padding-bottom: 20%;
+  	width: 20%;
+  }
+  .game-board.activeH {
+   width: 50%;
+}
+}
+@media screen and (max-width: 700px) and (max-height: 670px){
+  .hard {
+  	padding-bottom: 10%;
+  	width: 10%;
+  }
+	.game-board.activeE {
+	 width: 92%;
+	}
+  .game-board.activeH {
+   width: 100%;
+}
+}
+@media screen and (max-width: 700px) and (max-height: 645px){
+
+	.game-board.activeE {
+	 width: 88%;
+	}
+}
+
+@media screen and (max-width: 700px) and (max-height: 620px){
+
+	.game-board.activeE {
+	 width: 84%;
+	}
+}
+@media screen and (max-width: 700px) and (max-height: 600px){
+  .easy {
+  	padding-bottom: 20%;
+  	width: 20%;
+  }
+	.game-board.activeE {
+	 width: 80%;
+	}
+}
+@media screen and (max-width: 700px) and (max-height: 575px){
+	.game-board.activeE {
+	 width: 76%;
+	}
+}
+@media screen and (max-width: 700px) and (max-height: 545px){
+	.game-board.activeE {
+	 width: 74%;
+	}
+}
+@media screen and (max-width: 700px) and (max-height: 530px){
+	.game-board.activeN {
+	 width: 94%;
+	}
+  .game-board.activeE {
+	 width: 70%;
+	}
+}
+@media screen and (max-width: 700px) and (max-height: 510px){
+  .game-board.activeE {
+   width: 66%;
+  }
+	.game-board.activeN {
+	 width: 90%;
+	}
+}
+@media screen and (max-width: 700px) and (max-height: 485px){
+  .game-board.activeE {
+   width: 62%;
+  }
+	.game-board.activeN {
+	 width: 86%;
+	}
+}
+@media screen and (max-width: 700px) and (max-height: 465px){
+  .normal {
+  	padding-bottom: 14%;
+  	width: 14%;
+  }
+  .game-board.activeE {
+   width: 58%;
+  }
+	.game-board.activeN {
+	 width: 82%;
+	}
+}
+@media screen and (max-width: 700px) and (max-height: 450px){
+	.game-board.activeN {
+	 width: 78%;
+	}
+}
+@media screen and (max-width: 700px) and (max-height: 435px){
+  .game-board.activeE {
+   width: 54%;
+  }
+	.game-board.activeN {
+	 width: 74%;
+	}
+  .game-board.activeH {
+	 width: 96%;
+	}
+}
+@media screen and (max-width: 700px) and (max-height: 415px){
+  .easy {
+  	padding-bottom: 10%;
+  	width: 10%;
+  }
+  .normal {
+  	padding-bottom: 10%;
+  	width: 10%;
+  }
+  .game-board.activeE {
+   width: 100%;
+  }
+	.game-board.activeN {
+	 width: 100%;
+	}
+  .game-board.activeH {
+	 width: 92%;
+	}
+}
+@media screen and (max-width: 700px) and (max-height: 400px){
+  .game-board.activeH {
+	 width: 88%;
+	}
+}
+@media screen and (max-width: 700px) and (max-height: 385px){
+  .game-board.activeH {
+	 width: 84%;
+	}
+}
+@media screen and (max-width: 700px) and (max-height: 370px){
+  .game-board.activeH {
+	 width: 80%;
+	}
+}
+@media screen and (max-width: 700px) and (max-height: 355px){
+  .game-board.activeH {
+	 width: 76%;
+	}
+}
+@media screen and (max-width: 700px) and (max-height: 345px){
+	.game-board.activeN {
+	 width: 96%;
+	}
+  .game-board.activeH {
+	 width: 72%;
+	}
+}
+@media screen and (max-width: 700px) and (max-height: 335px){
+	.game-board.activeN {
+	 width: 92%;
+	}
+  .game-board.activeH {
+	 width: 68%;
+	}
+}
+@media screen and (max-width: 700px) and (max-height: 320px){
+	.game-board.activeN {
+	 width: 86%;
+	}
+  .game-board.activeH {
+	 width: 64%;
+	}
+}
+@media screen and (max-width: 700px) and (max-height: 310px){
+	.game-board.activeN {
+	 width: 80%;
+	}
+  .game-board.activeH {
+   width: 60%;
+  }
+}
+@media screen and (max-width: 700px) and (max-height: 295px){
+	.game-board.activeN {
+	 width: 74%;
+	}
+  .game-board.activeH {
 	 width: 54%;
 	}
 }
+
+
+/* ////650 */
+/* @media screen and (max-width: 650px) and (max-height: 715px){
+
+	.game-board.activeN {
+	 width: 100%;
+	}
+} */
+
+@media screen and (max-width: 655px) and (max-height: 280px){
+
+	.game-board.activeH {
+	 width: 58%;
+	}
+}
+
+@media screen and (max-width: 650px) and (max-height: 900px){
+
+	.game-board.activeH {
+	 width: 74%;
+	}
+}
+@media screen and (max-width: 650px) and (max-height: 880px){
+
+	.game-board.activeH {
+	 width: 70%;
+	}
+}
+@media screen and (max-width: 650px) and (max-height: 835px){
+
+	.game-board.activeH {
+	 width: 66%;
+	}
+}
+@media screen and (max-width: 650px) and (max-height: 780px){
+
+	.game-board.activeH {
+	 width: 62%;
+	}
+}
+@media screen and (max-width: 650px) and (max-height: 740px){
+  .hard {
+    padding-bottom: 20%;
+    width: 20%;
+  }
+
+  .game-board.activeH {
+   width: 60%;
+  }
+}
+
+@media screen and (max-width: 650px) and (max-height: 720px){
+
+  .game-board.activeH {
+   width: 58%;
+  }
+}
+@media screen and (max-width: 650px) and (max-height: 700px){
+
+  .game-board.activeH {
+   width: 56%;
+  }
+}
+@media screen and (max-width: 650px) and (max-height: 680px){
+
+  .game-board.activeH {
+   width: 54%;
+  }
+}
+@media screen and (max-width: 650px) and (max-height: 650px){
+
+  .game-board.activeH {
+   width: 52%;
+  }
+}
+
+@media screen and (max-width: 650px) and (max-height: 625px){
+  .hard {
+  	padding-bottom: 10%;
+  	width: 10%;
+  }
+
+	.game-board.activeN {
+	 width: 100%;
+	}
+  .game-board.activeH {
+   width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) and (max-height: 495px){
+
+	.game-board.activeN {
+	 width: 96%;
+	}
+}
+@media screen and (max-width: 650px) and (max-height: 475px){
+
+	.game-board.activeN {
+	 width: 92%;
+	}
+}
+@media screen and (max-width: 650px) and (max-height: 465px){
+	.normal {
+		padding-bottom: 14%;
+		width: 14%;
+	}
+	.game-board.activeN {
+	 width: 92%;
+	}
+}
+@media screen and (max-width: 650px) and (max-height: 460px){
+
+	.game-board.activeN {
+	 width: 88%;
+	}
+}
+@media screen and (max-width: 650px) and (max-height: 445px){
+
+	.game-board.activeN {
+	 width: 84%;
+	}
+}
+@media screen and (max-width: 650px) and (max-height: 425px){
+
+	.game-board.activeN {
+	 width: 80%;
+	}
+}
+@media screen and (max-width: 650px) and (max-height: 410px){
+	.normal {
+		padding-bottom: 10%;
+		width: 10%;
+		font-size: 2rem;
+	}
+
+	.game-board.activeN {
+	 width: 100%;
+	}
+}
+@media screen and (max-width: 650px) and (max-height: 395px){
+	.game-board.activeH {
+	 width: 96%;
+	}
+}
+@media screen and (max-width: 650px) and (max-height: 380px){
+	.game-board.activeH {
+	 width: 92%;
+	}
+}
+@media screen and (max-width: 650px) and (max-height: 370px){
+	.game-board.activeH {
+	 width: 88%;
+	}
+}
+@media screen and (max-width: 650px) and (max-height: 360px){
+	.game-board.activeH {
+	 width: 84%;
+	}
+}
+@media screen and (max-width: 650px) and (max-height: 350px){
+	.game-board.activeH {
+	 width: 80%;
+	}
+}
+@media screen and (max-width: 650px) and (max-height: 340px){
+	.game-board.activeH {
+	 width: 76%;
+	}
+}
+@media screen and (max-width: 650px) and (max-height: 320px){
+	.game-board.activeN {
+	 width: 96%;
+	}
+}
+@media screen and (max-width: 650px) and (max-height: 310px){
+	.game-board.activeN {
+	 width: 92%;
+	}
+}
+@media screen and (max-width: 650px) and (max-height: 300px){
+	.game-board.activeN {
+	 width: 88%;
+	}
+}
+@media screen and (max-width: 650px) and (max-height: 290px){
+	.game-board.activeN {
+	 width: 84%;
+	}
+}
+@media screen and (max-width: 650px) and (max-height: 280px){
+	.game-board.activeN {
+	 width: 80%;
+	}
+}
+
+
 /* ///////W 600 */
 @media screen and (max-width: 600px) and (max-height: 1000px){
 	.game-board.activeH {
@@ -455,6 +1127,96 @@ font-size: 10px;
 	 width: 100%;
 	}
 }
+
+
+@media screen and (max-width: 580px) and (max-height: 800px){
+  .hard {
+  	padding-bottom: 20%;
+  	width: 20%;
+  }
+  .game-board.activeH {
+   width: 74%;
+  }
+}
+@media screen and (max-width: 580px) and (max-height: 770px){
+  .hard {
+  	padding-bottom: 20%;
+  	width: 20%;
+  }
+  .game-board.activeH {
+   width: 70%;
+  }
+}
+@media screen and (max-width: 580px) and (max-height: 735px){
+  .hard {
+  	padding-bottom: 20%;
+  	width: 20%;
+  }
+  .game-board.activeH {
+   width: 66%;
+  }
+}
+@media screen and (max-width: 580px) and (max-height: 695px){
+  .game-board.activeH {
+   width: 62%;
+  }
+}
+@media screen and (max-width: 580px) and (max-height: 650px){
+  .game-board.activeH {
+   width: 58%;
+  }
+}
+@media screen and (max-width: 580px) and (max-height: 610px){
+  .hard {
+  	padding-bottom: 10%;
+  	width: 10%;
+  }
+  .game-board.activeH {
+   width: 100%;
+  }
+}
+@media screen and (max-width: 580px) and (max-height: 345px){
+  .game-board.activeH {
+   width: 96%;
+  }
+}
+@media screen and (max-width: 580px) and (max-height: 335px){
+  .game-board.activeH {
+   width: 92%;
+  }
+}
+@media screen and (max-width: 580px) and (max-height: 320px){
+  .game-board.activeH {
+   width: 88%;
+  }
+}
+@media screen and (max-width: 580px) and (max-height: 310px){
+  .game-board.activeH {
+   width: 84%;
+  }
+}
+@media screen and (max-width: 580px) and (max-height: 300px){
+  .game-board.activeH {
+   width: 80%;
+  }
+}
+@media screen and (max-width: 580px) and (max-height: 290px){
+  .game-board.activeH {
+   width: 76%;
+  }
+}
+@media screen and (max-width: 580px) and (max-height: 280px){
+  .game-board.activeH {
+   width: 72%;
+  }
+}
+
+@media screen and (max-width: 540px) and (max-height: 720px){
+	.game-board.activeE {
+	 width: 100%;
+	}
+}
+
 
 /* ///////W 530 */
 
@@ -521,6 +1283,83 @@ font-size: 10px;
 	 width: 100%;
 	}
 }
+
+
+@media screen and (max-width: 500px) and (max-height: 1000px){
+  .game-board.activeH {
+   width: 92%;
+  }
+}
+
+@media screen and (max-width: 500px) and (max-height: 800px){
+  .game-board.activeH {
+   width: 86%;
+  }
+}
+@media screen and (max-width: 500px) and (max-height: 780px){
+  .game-board.activeH {
+   width: 82%;
+  }
+}
+@media screen and (max-width: 500px) and (max-height: 745px){
+  .game-board.activeH {
+   width: 78%;
+  }
+}
+@media screen and (max-width: 500px) and (max-height: 710px){
+  .game-board.activeH {
+   width: 74%;
+  }
+}
+@media screen and (max-width: 500px) and (max-height: 675px){
+  .game-board.activeH {
+   width: 70%;
+  }
+}
+@media screen and (max-width: 500px) and (max-height: 640px){
+  .game-board.activeH {
+   width: 66%;
+  }
+}
+@media screen and (max-width: 500px) and (max-height: 610px){
+  .hard {
+  	padding-bottom: 20%;
+  	width: 20%;
+  }
+  .game-board.activeH {
+   width: 62%;
+  }
+}
+@media screen and (max-width: 500px) and (max-height: 570px){
+  .game-board.activeH {
+   width: 58%;
+  }
+}
+@media screen and (max-width: 500px) and (max-height: 535px){
+  .hard {
+  	padding-bottom: 10%;
+  	width: 10%;
+  }
+  .game-board.activeH {
+   width: 100%;
+  }
+}
+@media screen and (max-width: 500px) and (max-height: 300px){
+  .game-board.activeH {
+   width: 96%;
+  }
+}
+@media screen and (max-width: 500px) and (max-height: 290px){
+  .game-board.activeH {
+   width: 92%;
+  }
+}
+@media screen and (max-width: 500px) and (max-height: 280px){
+  .game-board.activeH {
+   width: 88%;
+  }
+}
+
 
 /* ///////W 440 */
 @media screen and (max-width: 440px) and (max-height: 1000px){
@@ -745,6 +1584,223 @@ font-size: 10px;
 	}
  }
 
+@media screen and (max-width: 400px) and (max-height: 1000px){
+  .hard {
+  	padding-bottom: 20%;
+  	width: 20%;
+  }
+  .game-board.activeH {
+   width: 100%;
+  }
+}
+@media screen and (max-width: 400px) and (max-height: 760px){
+  .game-board.activeH {
+   width: 96%;
+  }
+}
+@media screen and (max-width: 400px) and (max-height: 735px){
+  .game-board.activeH {
+   width: 92%;
+  }
+}
+@media screen and (max-width: 400px) and (max-height: 710px){
+  .game-board.activeH {
+   width: 88%;
+  }
+}
+@media screen and (max-width: 400px) and (max-height: 680px){
+  .game-board.activeH {
+   width: 84%;
+  }
+}
+@media screen and (max-width: 400px) and (max-height: 650px){
+  .game-board.activeH {
+   width: 80%;
+  }
+}
+@media screen and (max-width: 400px) and (max-height: 620px){
+  .game-board.activeH {
+   width: 76%;
+  }
+}
+@media screen and (max-width: 400px) and (max-height: 595px){
+  .game-board.activeH {
+   width: 72%;
+  }
+}
+@media screen and (max-width: 400px) and (max-height: 565px){
+  .game-board.activeH {
+   width: 68%;
+  }
+}
+@media screen and (max-width: 400px) and (max-height: 540px){
+  .game-board.activeH {
+   width: 64%;
+  }
+}
+@media screen and (max-width: 400px) and (max-height: 510px){
+  .hard {
+  	padding-bottom: 10%;
+  	width: 10%;
+  }
+  .game-board.activeH {
+   width: 100%;
+  }
+}
+@media screen and (max-width: 375px) and (max-height: 1000px){
+  .game-board.activeH {
+   width: 100%;
+  }
+}
+@media screen and (max-width: 375px) and (max-height: 735px){
+  .game-board.activeH {
+   width: 96%;
+  }
+}
+
+
+@media screen and (max-width: 375px) and (max-height: 710px){
+  .game-board.activeH {
+   width: 92%;
+  }
+}
+@media screen and (max-width: 375px) and (max-height: 680px){
+  .game-board.activeH {
+   width: 88%;
+  }
+}
+@media screen and (max-width: 375px) and (max-height: 655px){
+  .game-board.activeH {
+   width: 84%;
+  }
+}
+@media screen and (max-width: 375px) and (max-height: 630px){
+  .game-board.activeH {
+   width: 80%;
+  }
+}
+@media screen and (max-width: 375px) and (max-height: 605px){
+  .game-board.activeH {
+   width: 76%;
+  }
+}
+@media screen and (max-width: 375px) and (max-height: 575px){
+  .game-board.activeH {
+   width: 72%;
+  }
+}
+@media screen and (max-width: 375px) and (max-height: 550px){
+  .game-board.activeH {
+   width: 68%;
+  }
+}
+@media screen and (max-width: 375px) and (max-height: 525px){
+  .game-board.activeH {
+   width: 64%;
+  }
+}
+@media screen and (max-width: 375px) and (max-height: 510px){
+  .hard {
+  	padding-bottom: 20%;
+  	width: 20%;
+  }
+  .game-board.activeH {
+   width: 64%;
+  }
+}
+@media screen and (max-width: 375px) and (max-height: 495px){
+
+  .game-board.activeH {
+   width: 60%;
+  }
+}
+@media screen and (max-width: 375px) and (max-height: 470px){
+  .hard {
+  	padding-bottom: 10%;
+  	width: 10%;
+  }
+  .game-board.activeH {
+   width: 100%;
+  }
+}
+@media screen and (max-width: 375px) and (max-height: 445px){
+
+  .game-board.activeH {
+   width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 360px) and (max-height: 740px){
+
+  .game-board.activeE {
+   width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 350px) and (max-height: 680px){
+  .game-board.activeH {
+   width: 96%;
+  }
+}
+@media screen and (max-width: 350px) and (max-height: 655px){
+  .game-board.activeH {
+   width: 92%;
+  }
+}
+@media screen and (max-width: 350px) and (max-height: 630px){
+  .game-board.activeH {
+   width: 88%;
+  }
+}
+@media screen and (max-width: 350px) and (max-height: 610px){
+  .game-board.activeH {
+   width: 84%;
+  }
+}
+@media screen and (max-width: 350px) and (max-height: 580px){
+  .game-board.activeH {
+   width: 80%;
+  }
+}
+@media screen and (max-width: 350px) and (max-height: 560px){
+  .game-board.activeH {
+   width: 76%;
+  }
+}
+@media screen and (max-width: 350px) and (max-height: 535px){
+  .game-board.activeH {
+   width: 72%;
+  }
+}
+@media screen and (max-width: 350px) and (max-height: 510px){
+  .hard {
+  	padding-bottom: 20%;
+  	width: 20%;
+  }
+  .game-board.activeH {
+   width: 70%;
+  }
+}
+@media screen and (max-width: 350px) and (max-height: 495px){
+  .game-board.activeH {
+   width: 66%;
+  }
+}
+@media screen and (max-width: 350px) and (max-height: 470px){
+  .hard {
+  	padding-bottom: 10%;
+  	width: 10%;
+  }
+  .game-board.activeH {
+   width: 100%;
+  }
+}
+
+
+/* ///////////// */
+
 /* //////W 320 */
 
 @media screen and (max-width: 320px) and (max-height: 1000px){
@@ -925,565 +1981,6 @@ width: 76%;
 	}
 }
 
-/* /////landscape */
-
-@media screen and (orientation:landscape) and (max-height: 940px){
-	.game-board.activeE {
-	width: 96%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 910px){
-	.game-board.activeE {
-	width: 92%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 870px){
-	.game-board.activeE {
-	width: 88%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 835px){
-	.game-board.activeE {
-	width: 84%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 800px){
-	.game-board.activeE {
-	width: 80%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 770px){
-	.game-board.activeE {
-	width: 76%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 735px){
-	.game-board.activeE {
-	width: 72%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 715px){
-	.game-board.activeN {
-	width: 96%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 700px){
-	.game-board.activeE {
-	width: 68%;
-	}
-	.game-board.activeN {
-	width: 92%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 665px){
-	.game-board.activeE {
-	width: 64%;
-	}
-	.game-board.activeN {
-	width: 88%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 640px){
-	.game-board.activeN {
-	width: 84%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 630px){
-	.game-board.activeE {
-	width: 60%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 615px){
-	.game-board.activeN {
-	width: 80%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 600px){
-	.easy {
-		padding-bottom: 10%;
-		width: 10%;
-		font-size: 3rem;
-	}
-	.game-board.activeE {
-	width: 100%;
-	}
-	.game-board.activeN {
-	width: 76%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 575px){
-	.game-board.activeH {
-	width: 96%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 565px){
-	.game-board.activeN {
-	width: 72%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 550px){
-	.game-board.activeH {
-	width: 92%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 535px){
-	.normal {
-		padding-bottom: 10%;
-		width: 10%;
-	}
-	.game-board.activeN {
-	width: 100%;
- }
-	.game-board.activeH {
-	width: 88%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 510px){
-	.game-board.activeH {
-	width: 84%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 490px){
-	.game-board.activeH {
-	width: 80%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 475px){
-	.game-board.activeH {
-	width: 76%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 460px){
-	.game-board.activeN {
-	width: 96%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 450px){
-	.game-board.activeH {
-	width: 72%;
-	}
-}
-
-@media screen and (orientation:landscape) and (max-height: 430px){
-	.game-board.activeH {
-	width: 68%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 425px){
-	.game-board.activeN {
-	width: 88%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 410px){
-	.game-board.activeH {
-	width: 64%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 395px){
-	.game-board.activeN {
-	width: 80%;
-	}
-	.game-board.activeH {
-	width: 60%;
-	}
-}
-
-@media screen and (orientation:landscape) and (max-height: 375px){
-	.game-board.activeN {
-	width: 76%;
-	}
-	.game-board.activeH {
-	width: 56%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 365px){
-	.game-board.activeN {
-	width: 72%;
-	}
-	.game-board.activeH {
-	width: 54%;
-	}
-}
- @media screen and (orientation:landscape) and (max-height: 355px){
-	.normal {
-		padding-bottom: 6%;
-		width: 6%;
-	}
-	.game-board.activeN {
-	width: 100%;
-	}
-}
-@media screen and (orientation:landscape) and (max-height: 350px){
-	.game-board.activeH {
-	width: 50%;
-	}
-}
-
-@media screen and (orientation:landscape) and (max-height: 340px){
-	.easy {
-		padding-bottom: 10%;
-		width: 10%;
-		font-size: 3rem;
-	}
-	.game-board.activeE {
-	width: 100%;
-	}
-}
-
-
-
-
-
-
-
-/* ////850 */
-
-@media screen and (max-width: 850px) and (max-height: 715px){
-
-	.game-board.activeN {
-	 width: 100%;
-	}
-}
-
-@media screen and (max-width: 850px) and (max-height: 625px){
-
-	.game-board.activeN {
-	 width: 96%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 600px){
-
-	.game-board.activeN {
-	 width: 92%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 575px){
-
-	.game-board.activeN {
-	 width: 88%;
-	}
-	.game-board.activeH {
-	 width: 100%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 550px){
-
-	.game-board.activeN {
-	 width: 84%;
-	}
-	.game-board.activeH {
-	 width: 96%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 535px){
-	.normal {
-		padding-bottom: 14%;
-		width: 14%;
-	}
-	.game-board.activeN {
-	 width: 80%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 505px){
-
-	.game-board.activeN {
-	 width: 76%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 480px){
-
-	.game-board.activeN {
-	 width: 72%;
-	}
-	.game-board.activeH {
-	 width: 92%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 465px){
-	.normal {
-		padding-bottom: 10%;
-		width: 10%;
-	}
-	.game-board.activeN {
-	 width: 100%;
-	}
-	.game-board.activeH {
-	 width: 88%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 445px){
-
-	.game-board.activeH {
-	 width: 84%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 425px){
-
-	.game-board.activeH {
-	 width: 80%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 410px){
-
-	.game-board.activeH {
-	 width: 76%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 395px){
-
-	.game-board.activeH {
-	 width: 72%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 390px){
-
-	.game-board.activeN {
-	 width: 96%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 380px){
-
-	.game-board.activeH {
-	 width: 68%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 375px){
-
-	.game-board.activeN {
-	 width: 92%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 365px){
-
-	.game-board.activeN {
-	 width: 88%;
-	}
-	.game-board.activeH {
-	 width: 64%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 355px){
-
-	.game-board.activeN {
-	 width: 84%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 340px){
-
-	.game-board.activeN {
-	 width: 80%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 345px){
-
-	.game-board.activeH {
-	 width: 60%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 330px){
-
-	.game-board.activeN {
-	 width: 76%;
-	}
-	.game-board.activeH {
-	 width: 54%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 320px){
-
-	.game-board.activeN {
-	 width: 72%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 310px){
-
-	.game-board.activeN {
-	 width: 68%;
-	}
-	.game-board.activeH {
-	 width: 50%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 300px){
-
-	.game-board.activeN {
-	 width: 64%;
-	}
-	.game-board.activeH {
-	 width: 46%;
-	}
-}
-@media screen and (max-width: 850px) and (max-height: 285px){
-
-	.game-board.activeN {
-	 width: 60%;
-	}
-	.game-board.activeH {
-	 width: 40%;
-	}
-}
-
-
-/* ////650 */
-/* @media screen and (max-width: 650px) and (max-height: 715px){
-
-	.game-board.activeN {
-	 width: 100%;
-	}
-} */
-@media screen and (max-width: 650px) and (max-height: 1000px){
-
-	.game-board.activeH {
-	 width: 76%;
-	}
-}
-@media screen and (max-width: 650px) and (max-height: 900px){
-
-	.game-board.activeH {
-	 width: 74%;
-	}
-}
-@media screen and (max-width: 650px) and (max-height: 880px){
-
-	.game-board.activeH {
-	 width: 70%;
-	}
-}
-@media screen and (max-width: 650px) and (max-height: 835px){
-
-	.game-board.activeH {
-	 width: 66%;
-	}
-}
-@media screen and (max-width: 650px) and (max-height: 780px){
-
-	.game-board.activeH {
-	 width: 62%;
-	}
-}
-@media screen and (max-width: 650px) and (max-height: 740px){
-	.hard {
-		padding-bottom: 10%;
-		width: 10%;
-	}
-
-	.game-board.activeH {
-	 width: 100%;
-	}
-}
-
-@media screen and (max-width: 650px) and (max-height: 625px){
-
-	.game-board.activeN {
-	 width: 100%;
-	}
-}
-
-@media screen and (max-width: 650px) and (max-height: 495px){
-
-	.game-board.activeN {
-	 width: 96%;
-	}
-}
-@media screen and (max-width: 650px) and (max-height: 475px){
-
-	.game-board.activeN {
-	 width: 92%;
-	}
-}
-@media screen and (max-width: 650px) and (max-height: 465px){
-	.normal {
-		padding-bottom: 14%;
-		width: 14%;
-	}
-	.game-board.activeN {
-	 width: 92%;
-	}
-}
-@media screen and (max-width: 650px) and (max-height: 460px){
-
-	.game-board.activeN {
-	 width: 88%;
-	}
-}
-@media screen and (max-width: 650px) and (max-height: 445px){
-
-	.game-board.activeN {
-	 width: 84%;
-	}
-}
-@media screen and (max-width: 650px) and (max-height: 425px){
-
-	.game-board.activeN {
-	 width: 80%;
-	}
-}
-@media screen and (max-width: 650px) and (max-height: 410px){
-	.normal {
-		padding-bottom: 10%;
-		width: 10%;
-		font-size: 2rem;
-	}
-
-	.game-board.activeN {
-	 width: 100%;
-	}
-}
-@media screen and (max-width: 650px) and (max-height: 395px){
-	.game-board.activeH {
-	 width: 96%;
-	}
-}
-@media screen and (max-width: 650px) and (max-height: 380px){
-	.game-board.activeH {
-	 width: 92%;
-	}
-}
-@media screen and (max-width: 650px) and (max-height: 370px){
-	.game-board.activeH {
-	 width: 88%;
-	}
-}
-@media screen and (max-width: 650px) and (max-height: 360px){
-	.game-board.activeH {
-	 width: 84%;
-	}
-}
-@media screen and (max-width: 650px) and (max-height: 350px){
-	.game-board.activeH {
-	 width: 80%;
-	}
-}
-@media screen and (max-width: 650px) and (max-height: 340px){
-	.game-board.activeH {
-	 width: 76%;
-	}
-}
-@media screen and (max-width: 650px) and (max-height: 320px){
-	.game-board.activeN {
-	 width: 96%;
-	}
-}
-@media screen and (max-width: 650px) and (max-height: 310px){
-	.game-board.activeN {
-	 width: 92%;
-	}
-}
-@media screen and (max-width: 650px) and (max-height: 300px){
-	.game-board.activeN {
-	 width: 88%;
-	}
-}
-@media screen and (max-width: 650px) and (max-height: 290px){
-	.game-board.activeN {
-	 width: 84%;
-	}
-}
-@media screen and (max-width: 650px) and (max-height: 280px){
-	.game-board.activeN {
-	 width: 80%;
-	}
-}
 
 
 /* @media screen and (max-height: 460px) and (max-width: 1000px){

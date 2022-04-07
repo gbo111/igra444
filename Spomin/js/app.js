@@ -3,10 +3,7 @@
 var svg_pics = ["img/K-03.svg", "img/K-04.svg", "img/K-06.svg", "img/K-09.svg", "img/K-10.svg", "img/K-13.svg", "img/K-16.svg", "img/K-17.svg", "img/K-22.svg", "img/K-23.svg", "img/K-24.svg", "img/K-25.svg", "img/K-26.svg", "img/K-33.svg", "img/K-34.svg", "img/K-35.svg"];
 const board = document.querySelector('.game-board');
 const container = document.getElementById('container');
-const easyMode = document.getElementById('easyMode');
-const normalMode = document.getElementById('normalMode');
-const hardMode = document.getElementById('hardMode');
-const reset = document.getElementById('reset');
+const reset = document.getElementById('resetB');
 const replay = document.getElementById('replay');
 const form = document.getElementById('form');
 const submit = document.getElementById('submit');
@@ -385,9 +382,9 @@ function matchChecker(e){
 
 
 reset.addEventListener('click', () => {
-	container.classList.toggle('activeN')
-	container.classList.toggle('activeE');
-	container.classList.toggle('activeH');
+	board.classList.toggle('activeN');
+	board.classList.toggle('activeE');
+	board.classList.toggle('activeH');
 
 	dashboard.classList.toggle('activeN');
 	dashboard.classList.toggle('activeE');
@@ -395,9 +392,9 @@ reset.addEventListener('click', () => {
 	startGame();
 });
 replay.addEventListener('click', () => {
-	container.classList.toggle('activeN')
-	container.classList.toggle('activeE');
-	container.classList.toggle('activeH');
+	board.classList.toggle('activeN')
+  board.classList.toggle('activeE');
+	board.classList.toggle('activeH');
 
 	dashboard.classList.toggle('activeN');
 	dashboard.classList.toggle('activeE');

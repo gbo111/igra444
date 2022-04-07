@@ -88,7 +88,7 @@ app.post('/api', (request, response) => {
       databaseEasy.insert({
       time: body.timeFinal,
       moves: body.m2,
-      name: body.name
+      nickname: body.nick
 
       });
 
@@ -104,7 +104,7 @@ app.post('/api', (request, response) => {
        databaseNormal.insert({
        time: body.timeFinal,
        moves: body.m2,
-       name: body.name
+       nickname: body.nick
 
        });
     } if ((body.timeEnd == (body.timeRe) ||
@@ -117,7 +117,7 @@ app.post('/api', (request, response) => {
           databaseHard.insert({
           time: body.timeFinal,
           moves: body.m2,
-          name: body.name
+          nickname: body.nick
 
           });
 
@@ -136,6 +136,7 @@ app.post('/api', (request, response) => {
      time: body.timeFinal,
      moves: body.m2,
      name: body.name,
+     nickname: body.nick,
      sola: body.sola,
      mail: body.mail,
      gdpr: body.gdpr,
@@ -156,6 +157,7 @@ app.post('/api', (request, response) => {
       time: body.timeFinal,
       moves: body.m2,
       name: body.name,
+      nickname: body.nick,
       sola: body.sola,
       mail: body.mail,
       gdpr: body.gdpr,
@@ -173,6 +175,7 @@ app.post('/api', (request, response) => {
          time: body.timeFinal,
          moves: body.m2,
          name: body.name,
+         nickname: body.nick,
          sola: body.sola,
          mail: body.mail,
          gdpr: body.gdpr,

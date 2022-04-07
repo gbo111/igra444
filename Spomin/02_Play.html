@@ -74,29 +74,26 @@
 		 		 <li><a href="03_Tools.html" class="tools">Tools</a></li>
 		 		 <li><a class="highScoreB" id="highScoreB">HighScore</a></li>
 		 	</ul>
-
 		 </nav>
 
+
+
 	<div class="container" id="container">
+
+		<div class="logo">
+						<img src="img/Unior_Logo-01.svg" alt="logo" />
+				</div>
+
+    <button class="resetB" id="resetB">
+				<i id = "reset" class="fas fa-redo-alt"></i>
+				</button>
 
 
 		<div class = "dashboard" id = "dashboard">
 
-			<div class="dashboard-element1">
-				<div class="time">
-				<i class=" dashboard-icon fas fa-stopwatch"></i> <span id="timer"></span> &nbsp; <i class=" dashboard-icon fas fa-clone"></i> <span id="moves"></span>
-				</div>
-
-		    </div>
-			<div class="dashboard-element2">
-				<div class="logo">
-		            <img src="img/Unior_Logo-01.svg" alt="logo" />
-		        </div>
-		    </div>
-			<div class="dashboard-element3">
-			    <i id = "reset" class="fas fa-redo-alt"></i>
-		    </div>
-
+					<div class="time">
+					<i class=" dashboard-icon fas fa-stopwatch"></i> <span id="timer"></span> &nbsp; <i class=" dashboard-icon fas fa-clone"></i> <span id="moves"></span>
+					</div>
 		 </div>
 
 
@@ -130,8 +127,12 @@
 
 
             <form id="myForm" name="myForm"  method="GET">
-                <label for="name">Ime in priimek:</label>
+
+        <label for="name">Ime in priimek:</label>
                 <input type="text" id="name" name="name" required/><p>
+
+				<label for="nick">Vzdevek:</label>
+					      <input type="text" id="nick" name="nick" required/><p>
 
 				<label for="šola">Šola:</label>
                 <input type="text" id="sola" name="sola" required/><p>

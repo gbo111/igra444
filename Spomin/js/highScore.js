@@ -74,8 +74,8 @@ async function getHSeasy() {
 			easyTime.textContent = `${item.time}`;
 			easyMovestext.textContent = `MOVES:`;
 			easyMoves.textContent = `${item.moves}`;
-			easyNametext.textContent = `NAME:`;
-			easyName.textContent = `${item.name}`;
+			easyNametext.textContent = `#:`;
+			easyName.textContent = `${item.nick}`;
 			// easyScore.textContent = `'TIME' ${item.time} 'MOVES'${item.moves} 'NAME'${item.name}`;
 
 	 }
@@ -132,8 +132,8 @@ async function getHSnormal() {
 		 normalTime.textContent = `${item.time}`;
 		 normalMovestext.textContent = `MOVES:`;
 		 normalMoves.textContent = `${item.moves}`;
-		 normalNametext.textContent = `NAME:`;
-		 normalName.textContent = `${item.name}`;
+		 normalNametext.textContent = `#:`;
+		 normalName.textContent = `${item.nick}`;
 		 // easyScore.textContent = `'TIME' ${item.time} 'MOVES'${item.moves} 'NAME'${item.name}`;
 
 	}
@@ -192,8 +192,8 @@ async function getHShard() {
 		 hardTime.textContent = `${item.time}`;
 		 hardMovestext.textContent = `MOVES:`;
 		 hardMoves.textContent = `${item.moves}`;
-		 hardNametext.textContent = `NAME:`;
-		 hardName.textContent = `${item.name}`;
+		 hardNametext.textContent = `#:`;
+		 hardName.textContent = `${item.nick}`;
 		 // easyScore.textContent = `'TIME' ${item.time} 'MOVES'${item.moves} 'NAME'${item.name}`;
 
 	}
