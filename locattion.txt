@@ -6,3 +6,5 @@ nodemon
 "scripts": { "start": "node server.js" }
 
 cd /c/users/ales/desktop/unior_memory
+
+git push -u origin main
