@@ -3,7 +3,7 @@
 
 
 
-@media screen and (max-height: 820px) and (orientation:landscape) {
+/* @media screen and (max-height: 820px) and (orientation:landscape) {
 
  .container {
    margin-top: 3vh;
@@ -26,9 +26,9 @@
  .description {
  height: 50vh;
  }
-}
+} */
 
-@media screen and (max-height: 660px) and (orientation:landscape) {
+/* @media screen and (max-height: 660px) and (orientation:landscape) {
 
  .container {
    margin-top: 3vh;
@@ -52,7 +52,7 @@
  height: 60vh;
  }
 
-}
+} */
 
 @media screen and (max-height: 520px) and (orientation:landscape) {
 

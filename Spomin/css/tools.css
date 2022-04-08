@@ -48,18 +48,18 @@ html,body {
 	background: white;
 	margin: auto;
 	width: 100%;
-	max-height: 800px;
-	max-width: 1000px;
+	height: 100vh;
+	/* max-height: 800px; */
+	max-width: 800px;
   padding: 0;
 	align-items: center;
 	justify-content: center;
-
 }
 
 .mainContainer{
 	background: #0077C0;
   padding-top: 10vh;
-  margin: auto;
+  /* margin: auto; */
   width: 100%;
 }
 
@@ -72,10 +72,11 @@ html,body {
    display: flex;
 	 flex-direction: row;
 	 align-items: center;
- 	justify-content: center;
-	margin: auto;
+ 	 justify-content: center;
+	 margin: auto;
 	background: #0077C0;
-	width: 100%;
+	width: 90%;
+	max-width: 800px;
 }
 
 
@@ -83,8 +84,10 @@ html,body {
   width: 40vh;
 	height: 40vh;
  background:#f0f5fd;
- border-radius: 4%;
+ border-radius: 8%;
  border-collapse: separate;
+ -webkit-border-radius: 8%;
+ -moz-border-radius: 8%;
  outline: 5px solid white;
 
 }
@@ -92,7 +95,7 @@ html,body {
 .right {
  /* align-items: center;
  justify-content: center; */
- padding-left: 3vw;
+margin-left: 3vw;
  width: 40vh;
 }
 
@@ -113,12 +116,15 @@ display: flex;
 }
 
 
+
 .displayImage{
 	margin: auto;
 	width:inherit;
   background: white;
 	border-radius: 8%;
 	border-collapse: separate;
+	-webkit-border-radius: 8%;
+  -moz-border-radius: 8%;
 	outline: 5px solid white;
 }
 
@@ -147,6 +153,8 @@ display: flex;
 	margin: 2vh;
 	border-radius: 8%;
 	border-collapse: separate;
+	-webkit-border-radius: 8%;
+  -moz-border-radius: 8%;
 	outline: .4vh solid white;
 
 	 cursor: pointer;
@@ -157,7 +165,9 @@ display: flex;
 .img-selected {
 
   border-radius: 10%;
-	border-collapse: separate; 
+	border-collapse: separate;
+	-webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
 	outline: 1vh solid white;
 	image-rendering: auto;
 	image-rendering: crisp-edges;

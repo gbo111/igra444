@@ -4,3 +4,5 @@ nodemon
 
 "start": "node index.js"
 "scripts": { "start": "node server.js" }
+
+cd /c/users/ales/desktop/unior_memory

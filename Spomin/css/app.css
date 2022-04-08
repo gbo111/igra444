@@ -234,6 +234,8 @@ h3 {
     align-items: center;
     border-radius: 8%;
 		border-collapse: separate;
+		-webkit-border-radius: 8%;
+    -moz-border-radius: 8%;
     color: #0077C0;
 	cursor: pointer;
 	outline: 2px solid white;
@@ -247,6 +249,8 @@ h3 {
 	transform-style: preserve-3d;
 	background: white;
 	border-radius: 8%
+	-webkit-border-radius: 8%;
+  -moz-border-radius: 8%;
 
 
 }
@@ -373,6 +377,8 @@ label.cb {
 	overflow-x: hidden;
 	border-radius: 8%;
 	border-collapse: separate;
+	-webkit-border-radius: 8%x;
+  -moz-border-radius: 8%;
   cursor: pointer;
   outline: 6px solid #0077C0;
 
