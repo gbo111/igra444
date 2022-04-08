@@ -114,6 +114,18 @@ display: flex;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
+.description::-webkit-scrollbar {
+	width: 15px;
+}
+.description::-webkit-scrollbar-track {
+	background: #f0f5fd;
+	margin-block: 20px;
+}
+.description::-webkit-scrollbar-thumb {
+	background: #545454;
+	border: 5px solid #f0f5fd;
+	border-radius: 10px;
+}
 
 
 
