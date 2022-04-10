@@ -7,4 +7,12 @@ nodemon
 
 cd /c/users/ales/desktop/unior_memory
 
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/gbo111/Spomin_1.6.git
 git push -u origin main
+
+
+git remote remove origin

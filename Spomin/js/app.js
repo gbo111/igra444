@@ -1,1 +1,417 @@
-'use strict';const _0x319695=_0x2a5a;(function(_0x47b902,_0xc1b3ac){const _0x943927=_0x2a5a,_0x295652=_0x47b902();while(!![]){try{const _0x176211=-parseInt(_0x943927(0x209))/0x1*(-parseInt(_0x943927(0x241))/0x2)+parseInt(_0x943927(0x24f))/0x3+-parseInt(_0x943927(0x25e))/0x4+parseInt(_0x943927(0x20d))/0x5*(-parseInt(_0x943927(0x217))/0x6)+parseInt(_0x943927(0x23c))/0x7*(-parseInt(_0x943927(0x24b))/0x8)+-parseInt(_0x943927(0x232))/0x9*(parseInt(_0x943927(0x239))/0xa)+-parseInt(_0x943927(0x254))/0xb*(-parseInt(_0x943927(0x224))/0xc);if(_0x176211===_0xc1b3ac)break;else _0x295652['push'](_0x295652['shift']());}catch(_0x10b18e){_0x295652['push'](_0x295652['shift']());}}}(_0x1a11,0xe171f));function _0x2a5a(_0xd3b31,_0x358a39){const _0x1a1171=_0x1a11();return _0x2a5a=function(_0x2a5afa,_0x58ba45){_0x2a5afa=_0x2a5afa-0x1f3;let _0x3356ef=_0x1a1171[_0x2a5afa];return _0x3356ef;},_0x2a5a(_0xd3b31,_0x358a39);}function _0x1a11(){const _0x1981ea=['img/K-06.svg','createElement','setDiff','slice','48eyfLIU','innerText','easy','fas','1259115CZfHqK','sec','getElementById','img/K-25.svg','mytime','1991WDZTIS','remove','forEach','img/K-01_Front.svg','add','value','getItem','gfhthzuj','img/K-13.svg','sfth','7313416mdDjYz','dgghg','assign','contains','back','img/K-03.svg','json','querySelectorAll','form','removeEventListener','hard','img','activeE','Pritisni\x20OK\x20za\x20potrditev\x20ali\x20Cancel\x20za\x20popravke','contextmenu','back-correct','submit','div','front-open','back-open','timer','img/K-26.svg','replay','src','appendChild','myForm','round','classList','setAttribute','floor','dashboard','lista','target','checked','176609XgAsdQ','call','img/K-34.svg','preloader','5Odumcm','resetB','input[name=\x27difficulty\x27]','visibility','not\x20match','hide','createDocumentFragment','front-correct','parentNode','img/K-23.svg','5440620PWaOHm','querySelector','reload','log','push','random','activeH','card-container','innerHTML','click','img/K-10.svg','addEventListener','hidden','273336lFsyTX','onload','hidePre()','stringify','img/K-35.svg','application/json','container','front','/api','00\x20:\x2000','img/K-33.svg','now','.card-container','card','7398dGyrlw','load','POST','img/K-17.svg','keys','activeN','length','200mvJQSe','get','normal','1424213VolgLo','moves','firstChild','min\x20:\x20','toggle','4UDQdzv','img/K-22.svg','style','nextElementSibling','img/K-04.svg','icon'];_0x1a11=function(){return _0x1981ea;};return _0x1a11();}var svg_pics=[_0x319695(0x263),_0x319695(0x245),_0x319695(0x247),'img/K-09.svg',_0x319695(0x221),_0x319695(0x25c),'img/K-16.svg',_0x319695(0x235),_0x319695(0x242),_0x319695(0x216),'img/K-24.svg',_0x319695(0x252),_0x319695(0x1fc),_0x319695(0x22e),_0x319695(0x20b),_0x319695(0x228)];const board=document[_0x319695(0x218)]('.game-board'),container=document[_0x319695(0x251)](_0x319695(0x22a)),reset=document[_0x319695(0x251)](_0x319695(0x20e)),replay=document['getElementById'](_0x319695(0x1fd)),form=document[_0x319695(0x251)](_0x319695(0x266)),submit=document[_0x319695(0x251)](_0x319695(0x1f7)),difficulties=document[_0x319695(0x265)](_0x319695(0x20f)),timer=document['getElementById'](_0x319695(0x1fb)),timer2=document[_0x319695(0x248)]('div'),timer3=document[_0x319695(0x248)](_0x319695(0x1f8)),cardContainers=document[_0x319695(0x265)](_0x319695(0x230)),dashboard=document[_0x319695(0x251)](_0x319695(0x205)),modal=document[_0x319695(0x218)]('.modal');let clickCount=0x0,selectedCards=[],iconClasses,sec,moves,wrongMoves,correctMoves,difficulty,dC,setTimer;function hidePre(){const _0x3e843c=_0x319695;document[_0x3e843c(0x251)](_0x3e843c(0x20c))[_0x3e843c(0x243)][_0x3e843c(0x210)]=_0x3e843c(0x223);}setTimeout(_0x319695(0x226),0xfa0),document['addEventListener'](_0x319695(0x1f5),function(_0x3aab80){_0x3aab80['preventDefault']();},![]);function shuffle1(_0x10e270){const _0x10ca0d=_0x319695;var _0x103488=_0x10e270[_0x10ca0d(0x238)],_0x20deef,_0x2ed0fa;while(_0x103488){_0x2ed0fa=Math[_0x10ca0d(0x204)](Math[_0x10ca0d(0x21c)]()*_0x103488--),_0x20deef=_0x10e270[_0x103488],_0x10e270[_0x103488]=_0x10e270[_0x2ed0fa],_0x10e270[_0x2ed0fa]=_0x20deef;}}function checkDifficulty(){const _0x511706=_0x319695;[][_0x511706(0x256)][_0x511706(0x20a)](difficulties,async function(_0x50db91){const _0x1ee080=_0x511706;_0x50db91['nextElementSibling'][_0x1ee080(0x202)][_0x1ee080(0x255)]('checked');if(_0x50db91[_0x1ee080(0x259)]==='easy'&&_0x50db91[_0x1ee080(0x208)]===!![])difficulty=0x10,dC='easy',_0x50db91[_0x1ee080(0x244)]['classList'][_0x1ee080(0x258)](_0x1ee080(0x208)),localStorage[_0x1ee080(0x249)]=_0x1ee080(0x24d),board['classList'][_0x1ee080(0x240)](_0x1ee080(0x1f3)),board[_0x1ee080(0x202)][_0x1ee080(0x255)](_0x1ee080(0x237)),board[_0x1ee080(0x202)][_0x1ee080(0x255)]('activeH'),dashboard[_0x1ee080(0x202)][_0x1ee080(0x240)](_0x1ee080(0x1f3)),dashboard['classList'][_0x1ee080(0x255)](_0x1ee080(0x237)),dashboard[_0x1ee080(0x202)][_0x1ee080(0x255)](_0x1ee080(0x21d));else{if(_0x50db91[_0x1ee080(0x259)]===_0x1ee080(0x23b)&&_0x50db91[_0x1ee080(0x208)]===!![])difficulty=0x18,dC='normal',_0x50db91['nextElementSibling'][_0x1ee080(0x202)][_0x1ee080(0x258)](_0x1ee080(0x208)),localStorage[_0x1ee080(0x249)]=_0x1ee080(0x23b),board['classList'][_0x1ee080(0x240)](_0x1ee080(0x237)),board[_0x1ee080(0x202)][_0x1ee080(0x255)](_0x1ee080(0x1f3)),board['classList'][_0x1ee080(0x255)](_0x1ee080(0x21d)),dashboard[_0x1ee080(0x202)][_0x1ee080(0x240)](_0x1ee080(0x237)),dashboard[_0x1ee080(0x202)][_0x1ee080(0x255)](_0x1ee080(0x1f3)),dashboard['classList']['remove'](_0x1ee080(0x21d));else _0x50db91[_0x1ee080(0x259)]===_0x1ee080(0x268)&&_0x50db91[_0x1ee080(0x208)]===!![]&&(difficulty=0x20,dC=_0x1ee080(0x268),_0x50db91[_0x1ee080(0x244)][_0x1ee080(0x202)][_0x1ee080(0x258)](_0x1ee080(0x208)),localStorage[_0x1ee080(0x249)]=_0x1ee080(0x268),board[_0x1ee080(0x202)]['toggle'](_0x1ee080(0x21d)),board[_0x1ee080(0x202)][_0x1ee080(0x255)](_0x1ee080(0x237)),board[_0x1ee080(0x202)][_0x1ee080(0x255)]('activeE'),dashboard[_0x1ee080(0x202)][_0x1ee080(0x240)](_0x1ee080(0x21d)),dashboard[_0x1ee080(0x202)][_0x1ee080(0x255)]('activeE'),dashboard[_0x1ee080(0x202)][_0x1ee080(0x255)](_0x1ee080(0x237)));}});}function populate(_0x5f3a5a){const _0x1e5025=_0x319695;iconClasses=[],clickCount=0x0,board[_0x1e5025(0x21f)]='',shuffle1(svg_pics);let _0x22cd60=svg_pics[_0x1e5025(0x24a)](0x0,_0x5f3a5a/0x2);_0x22cd60=_0x22cd60['concat'](_0x22cd60),shuffle1(_0x22cd60);const _0x3a59cd=document[_0x1e5025(0x213)]();for(let _0x3bd874=0x0;_0x3bd874<_0x5f3a5a;_0x3bd874++){const _0x1f8318=document[_0x1e5025(0x248)](_0x1e5025(0x1f8));_0x1f8318['classList'][_0x1e5025(0x258)](_0x1e5025(0x21e),dC);const _0x2bcfa5=document[_0x1e5025(0x248)](_0x1e5025(0x1f8)),_0x447cf4=document['createElement']('div');_0x2bcfa5[_0x1e5025(0x202)][_0x1e5025(0x258)]('card',_0x1e5025(0x22b));var _0xb37a23=document['createElement'](_0x1e5025(0x269));_0xb37a23[_0x1e5025(0x203)](_0x1e5025(0x1fe),_0x1e5025(0x257)),_0x2bcfa5[_0x1e5025(0x1ff)](_0xb37a23),_0x447cf4[_0x1e5025(0x202)][_0x1e5025(0x258)]('card',_0x1e5025(0x262));var _0x428db9=document[_0x1e5025(0x248)](_0x1e5025(0x269)),_0x188603=_0x22cd60[_0x3bd874]['replace'](/(^img\/)|(\.svg$)/gi,'');_0x428db9['setAttribute'](_0x1e5025(0x1fe),_0x22cd60[_0x3bd874]),_0x428db9[_0x1e5025(0x202)][_0x1e5025(0x258)](_0x1e5025(0x246),_0x1e5025(0x24e),_0x188603),_0x447cf4[_0x1e5025(0x1ff)](_0x428db9),_0x1f8318[_0x1e5025(0x1ff)](_0x2bcfa5),_0x1f8318[_0x1e5025(0x1ff)](_0x447cf4),_0x3a59cd[_0x1e5025(0x1ff)](_0x1f8318);}board[_0x1e5025(0x1ff)](_0x3a59cd);}function stopwatch(){const _0x1c2d41=_0x319695;sec+=0x1;let _0x1091e3=Math['round'](sec/0x3c),_0x1ee3fb=sec%0x3c;timer[_0x1c2d41(0x24c)]=nf(_0x1091e3,0x2)+'\x20:\x20'+nf(_0x1ee3fb,0x2),timer2[_0x1c2d41(0x24c)]=_0x1091e3+_0x1c2d41(0x23f)+_0x1ee3fb+_0x1c2d41(0x250),timer3[_0x1c2d41(0x24c)]=nf(_0x1091e3,0x2)+nf(_0x1ee3fb,0x2);}async function startLoad(){const _0x551783=_0x319695;function _0xb23747(){const _0x4bb17a=_0x2a5a;sec=0x0,moves=0x0,wrongMoves=0x0,correctMoves=0x0,timer[_0x4bb17a(0x24c)]=_0x4bb17a(0x22d),document[_0x4bb17a(0x251)](_0x4bb17a(0x23d))['innerHTML']='0',modal['classList'][_0x4bb17a(0x258)](_0x4bb17a(0x212)),clearInterval(setTimer),checkDifficulty(),populate(difficulty),board[_0x4bb17a(0x222)](_0x4bb17a(0x220),async function _0x2ed666(){const _0x3230d=_0x4bb17a;clearInterval(setTimer),setTimer=setInterval(stopwatch,0x3e8),localStorage[_0x3230d(0x253)]=Math[_0x3230d(0x201)](Date[_0x3230d(0x22f)]()/0x3e8),board[_0x3230d(0x267)](_0x3230d(0x220),_0x2ed666);});}_0xb23747();const _0x4bd557={'action':0x75bcd15},_0x55cae3={'method':'POST','headers':{'Content-Type':'application/json'},'body':JSON['stringify'](_0x4bd557)},_0x2f0ce0=await fetch(_0x551783(0x22c),_0x55cae3),_0x731eac=await _0x2f0ce0['json']();var _0x5c2287=_0x731eac[_0x551783(0x25d)],_0x4131ef=_0x731eac[_0x551783(0x25b)],_0xf84a01=_0x731eac[_0x551783(0x25f)];function _0x249a44(_0xc90d36){const _0x5ef9b0=_0x551783;let _0x3c4aeb;switch(dC){case _0x5ef9b0(0x24d):_0xc90d36===_0x5c2287&&(_0x3c4aeb=!![]);;break;case _0x5ef9b0(0x23b):_0xc90d36===_0x4131ef&&(_0x3c4aeb=!![]);;break;case _0x5ef9b0(0x268):_0xc90d36===_0xf84a01&&(_0x3c4aeb=!![]);;break;};_0x3c4aeb===!![]&&setTimeout(async function(){const _0x2a176a=_0x5ef9b0;document['getElementById']('final-time')[_0x2a176a(0x24c)]=timer2[_0x2a176a(0x24c)],document[_0x2a176a(0x251)]('final-moves')['innerText']=moves,modal['classList'][_0x2a176a(0x255)]('hide');const _0x2cd035=Math[_0x2a176a(0x201)](Date[_0x2a176a(0x22f)]()/0x3e8);var _0x52b48a=localStorage[_0x2a176a(0x25a)](_0x2a176a(0x253));const _0x845dbe={'timeStampEnd':_0x2cd035,'time':timer3[_0x2a176a(0x24c)],'timeStampStart':_0x52b48a,'timeF':timer2[_0x2a176a(0x24c)],'m1':moves},_0x50ee80={'method':_0x2a176a(0x234),'headers':{'Content-Type':_0x2a176a(0x229)},'body':JSON[_0x2a176a(0x227)](_0x845dbe)},_0x43679d=await fetch(_0x2a176a(0x22c),_0x50ee80),_0x88ca14=await _0x43679d[_0x2a176a(0x264)]();let _0x189013;myForm[_0x2a176a(0x222)]('submit',_0x189013=function(_0x493b47){const _0xfc12bb=_0x2a176a;_0x493b47['preventDefault']();if(confirm(_0xfc12bb(0x1f4)))this['removeEventListener'](_0xfc12bb(0x1f7),_0x189013),_0x5c0cd0(_0x493b47[_0xfc12bb(0x207)]);else{}});async function _0x5c0cd0(_0x5a1d9a){const _0x5b8aae=_0x2a176a;var _0x6ae033=localStorage['getItem']('setDiff');const _0x107d73={'diff':_0x6ae033};let _0x210177=document[_0x5b8aae(0x251)](_0x5b8aae(0x200)),_0x56ecaf=new FormData(_0x210177);for(let _0x1519cb of _0x56ecaf[_0x5b8aae(0x236)]()){console[_0x5b8aae(0x21a)](_0x1519cb,_0x56ecaf[_0x5b8aae(0x23a)](_0x1519cb));}function _0xc84ea1(_0x22155a){const _0x442cc2=_0x5b8aae;let _0x21496b={};for(let _0xbf65a2 of _0x22155a[_0x442cc2(0x236)]()){_0x21496b[_0xbf65a2]=_0x22155a['get'](_0xbf65a2);}return _0x21496b;}let _0x14b205=_0xc84ea1(_0x56ecaf);localStorage[_0x5b8aae(0x206)]=JSON[_0x5b8aae(0x227)](_0x14b205);const _0xcd0791={'timeSub':timer3[_0x5b8aae(0x24c)],'m2':moves},_0x464061=Object[_0x5b8aae(0x260)](_0xcd0791,_0x107d73,_0x88ca14,_0x14b205),_0x4b232c={'method':_0x5b8aae(0x234),'headers':{'Content-Type':_0x5b8aae(0x229)},'body':JSON[_0x5b8aae(0x227)](_0x464061)},_0x3052ab=await fetch(_0x5b8aae(0x22c),_0x4b232c),_0x5abee9=await _0x3052ab['json']();localStorage['back38']=JSON[_0x5b8aae(0x227)](_0x5abee9),location[_0x5b8aae(0x219)]();}clearInterval(setTimer);},0x3e8);}function _0x570049(_0x197eed){const _0x34fe01=_0x551783;_0x197eed[_0x34fe01(0x207)]['parentNode'][_0x34fe01(0x202)][_0x34fe01(0x261)](_0x34fe01(0x231))&&!_0x197eed[_0x34fe01(0x207)][_0x34fe01(0x215)][_0x34fe01(0x202)]['contains']('front-open')&&(_0x197eed[_0x34fe01(0x207)][_0x34fe01(0x215)][_0x34fe01(0x202)][_0x34fe01(0x258)](_0x34fe01(0x1f9)),_0x197eed[_0x34fe01(0x207)][_0x34fe01(0x215)][_0x34fe01(0x244)][_0x34fe01(0x202)][_0x34fe01(0x258)](_0x34fe01(0x1fa)),iconClasses[_0x34fe01(0x21b)](_0x197eed[_0x34fe01(0x207)][_0x34fe01(0x215)][_0x34fe01(0x244)][_0x34fe01(0x23e)][_0x34fe01(0x202)][0x2]),selectedCards[_0x34fe01(0x21b)](_0x197eed[_0x34fe01(0x207)][_0x34fe01(0x215)]),clickCount+=0x1,clickCount===0x2&&(clickCount=0x0,moves+=0x1,document[_0x34fe01(0x251)](_0x34fe01(0x23d))[_0x34fe01(0x21f)]=moves,board[_0x34fe01(0x267)](_0x34fe01(0x220),_0x570049),setTimeout(function(){const _0x391417=_0x34fe01;board[_0x391417(0x222)]('click',_0x570049);},0x3e8),iconClasses[0x0]===iconClasses[0x1]?(console[_0x34fe01(0x21a)]('match'),correctMoves+=0x1,_0x249a44(correctMoves),iconClasses=[],[][_0x34fe01(0x256)][_0x34fe01(0x20a)](selectedCards,_0x10b58d=>{const _0x31ef9a=_0x34fe01;_0x10b58d[_0x31ef9a(0x202)]['add'](_0x31ef9a(0x214)),_0x10b58d[_0x31ef9a(0x244)]['classList'][_0x31ef9a(0x258)](_0x31ef9a(0x1f6));})):(console[_0x34fe01(0x21a)](_0x34fe01(0x211)),setTimeout(function(){const _0x3c4e41=_0x34fe01;iconClasses=[],[]['forEach'][_0x3c4e41(0x20a)](selectedCards,_0x2a2cdb=>{const _0x39d18c=_0x3c4e41;_0x2a2cdb[_0x39d18c(0x202)][_0x39d18c(0x255)](_0x39d18c(0x1f9)),_0x2a2cdb[_0x39d18c(0x244)]['classList'][_0x39d18c(0x255)](_0x39d18c(0x1fa)),selectedCards=[];});},0x3e8))));}reset[_0x551783(0x222)](_0x551783(0x220),()=>{const _0x17555d=_0x551783;board[_0x17555d(0x202)]['toggle'](_0x17555d(0x237)),board[_0x17555d(0x202)][_0x17555d(0x240)](_0x17555d(0x1f3)),board[_0x17555d(0x202)]['toggle']('activeH'),dashboard[_0x17555d(0x202)]['toggle'](_0x17555d(0x237)),dashboard[_0x17555d(0x202)]['toggle'](_0x17555d(0x1f3)),dashboard[_0x17555d(0x202)]['toggle'](_0x17555d(0x21d)),_0xb23747();}),replay[_0x551783(0x222)](_0x551783(0x220),()=>{const _0x3c98a8=_0x551783;board['classList'][_0x3c98a8(0x240)]('activeN'),board[_0x3c98a8(0x202)]['toggle']('activeE'),board[_0x3c98a8(0x202)]['toggle'](_0x3c98a8(0x21d)),dashboard[_0x3c98a8(0x202)][_0x3c98a8(0x240)](_0x3c98a8(0x237)),dashboard[_0x3c98a8(0x202)][_0x3c98a8(0x240)](_0x3c98a8(0x1f3)),dashboard['classList'][_0x3c98a8(0x240)](_0x3c98a8(0x21d)),_0xb23747();}),form[_0x551783(0x222)]('change',_0xb23747),window[_0x551783(0x222)]('click',function(_0x54a64f){const _0x1812e3=_0x551783;_0x54a64f[_0x1812e3(0x207)]===modal&&_0xb23747();}),board['addEventListener'](_0x551783(0x220),_0x570049),window['addEventListener'](_0x551783(0x233),_0xb23747);};window[_0x319695(0x225)]=startLoad;
+"use strict";
+
+var svg_pics = ["img/K-03.svg", "img/K-04.svg", "img/K-06.svg", "img/K-09.svg", "img/K-10.svg", "img/K-13.svg", "img/K-16.svg", "img/K-17.svg", "img/K-22.svg", "img/K-23.svg", "img/K-24.svg", "img/K-25.svg", "img/K-26.svg", "img/K-33.svg", "img/K-34.svg", "img/K-35.svg"];
+const board = document.querySelector('.game-board');
+const container = document.getElementById('container');
+const reset = document.getElementById('resetB');
+const replay = document.getElementById('replay');
+const form = document.getElementById('form');
+const submit = document.getElementById('submit');
+const difficulties = document.querySelectorAll("input[name='difficulty']");
+const timer = document.getElementById('timer');
+const timer2 = document.createElement('div');
+const timer3 = document.createElement('div');
+const cardContainers = document.querySelectorAll('.card-container');
+const dashboard = document.getElementById('dashboard');
+const modal = document.querySelector('.modal');
+let clickCount = 0;
+let selectedCards = [];
+let iconClasses, sec,  moves,  wrongMoves, correctMoves, difficulty, dC, setTimer;
+//const ts = Math.round(Date.now() / 1000);
+
+
+//Preloader
+function hidePre(){
+	document.getElementById('preloader').style.visibility='hidden';
+}
+   setTimeout('hidePre()', 4000);
+
+
+
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+}, false);
+
+
+
+
+
+//shuffle function from https://bost.ocks.org/mike/shuffle/
+function shuffle1(array) {
+	var m = array.length, t, i;
+	while (m) {
+		i = Math.floor(Math.random() * m--);
+		t = array[m];
+		array[m] = array[i];
+		array[i] = t;
+	}
+}
+
+// go over the radio buttons and check the difficulty selection
+
+
+ function checkDifficulty(){
+	[].forEach.call(difficulties, async function(input){
+		input.nextElementSibling.classList.remove('checked');
+		if (input.value === 'easy' && input.checked === true) {
+			difficulty = 16;
+			dC = 'easy';
+			input.nextElementSibling.classList.add('checked');
+
+			localStorage.setDiff = ("easy");
+			// chrome.storage.sync.set({'setItem': 'easy'}, function(){});
+	 	   board.classList.toggle('activeE')
+			 board.classList.remove('activeN');
+			 board.classList.remove('activeH');
+
+			 dashboard.classList.toggle('activeE');
+			 dashboard.classList.remove('activeN');
+			 dashboard.classList.remove('activeH');
+
+
+		} else if (input.value === 'normal' && input.checked === true) {
+			difficulty = 24;
+			dC = 'normal';
+			input.nextElementSibling.classList.add('checked');
+
+      localStorage.setDiff = ("normal");
+			  board.classList.toggle('activeN')
+			  board.classList.remove('activeE');
+			  board.classList.remove('activeH');
+
+			  dashboard.classList.toggle('activeN');
+			  dashboard.classList.remove('activeE');
+			  dashboard.classList.remove('activeH');
+
+		} else if (input.value === 'hard' && input.checked === true) {
+			difficulty = 32;
+			dC = 'hard';
+			input.nextElementSibling.classList.add('checked');
+
+      localStorage.setDiff = ("hard");
+			 board.classList.toggle('activeH')
+			 board.classList.remove('activeN');
+			 board.classList.remove('activeE');
+
+			 dashboard.classList.toggle('activeH');
+			 dashboard.classList.remove('activeE');
+			 dashboard.classList.remove('activeN');
+
+		}
+	});
+}
+
+function populate(ghjkl) {
+	iconClasses = [];
+	 clickCount = 0;
+	board.innerHTML = '';
+	//LOGIC IS: shuffle the main array and slice half the number of cards
+	//this is to always get a random selection of pics
+	shuffle1(svg_pics);
+	let boardPics = svg_pics.slice(0, ghjkl/2);
+	//duplicate the array values to make pairs and shuffle this new array
+	boardPics = boardPics.concat(boardPics);
+	shuffle1(boardPics);
+	//actually populate HTML
+	const fragment = document.createDocumentFragment();
+	for (let x = 0; x < ghjkl; x++) {
+		const cardContainer = document.createElement('div');
+		cardContainer.classList.add('card-container', dC);
+		const front = document.createElement('div');
+		const back = document.createElement('div');
+
+		    front.classList.add('card', 'front');
+		var front_img = document.createElement('img');
+		front_img.setAttribute("src", "img/K-01_Front.svg");
+		front.appendChild(front_img);
+
+			back.classList.add('card', 'back');
+		var back_img = document.createElement('img');
+		var cls = boardPics[x].replace(/(^img\/)|(\.svg$)/gi, "");
+		back_img.setAttribute("src", boardPics[x]);
+		back_img.classList.add('icon','fas', cls);
+
+		back.appendChild(back_img);
+		cardContainer.appendChild(front);
+		cardContainer.appendChild(back);
+		fragment.appendChild(cardContainer);
+	}
+	board.appendChild(fragment);
+}
+
+
+//var counter = 0;
+
+function stopwatch(){
+	sec+=1;
+	let minutes = Math.floor(sec/60);
+	let seconds = sec % 60;
+  timer.innerText = nf(minutes, 2)+" : "+ nf(seconds, 2);
+	timer2.innerText = minutes +"min : "+ seconds + "sec";
+  timer3.innerText =  nf(minutes, 2) + nf(seconds, 2);
+
+}
+
+
+//async function startLoad()
+
+ async function startLoad() {
+
+	  function startGame() {
+	  //cleanup board and reset everything
+	  sec = 0;
+	  moves = 0;
+	  wrongMoves = 0;
+	  correctMoves = 0;
+	  timer.innerText = '00 : 00';
+		document.getElementById('moves').innerHTML = '0';
+	  modal.classList.add('hide');
+	  clearInterval(setTimer);
+	  //restart game logic
+	  checkDifficulty();
+	  populate(difficulty);
+	  //start the timer on first click
+		board.addEventListener('click', async function clickOnce(){
+		 clearInterval(setTimer);
+		 setTimer = setInterval(stopwatch, 1000);
+
+			localStorage.mytime = Math.round(Date.now() / 1000);
+
+
+		 board.removeEventListener('click', clickOnce)
+		});
+	 }
+	 startGame();
+
+	const start = {action: 123456789}
+	const options2 = {
+	method: 'POST',
+	headers: {
+		'Content-Type': 'application/json'
+	},
+		body: JSON.stringify(start)
+	};
+
+	const response2 = await fetch('/api', options2);
+	const wqdffsdfs = await response2.json();
+
+	var gbnjklopp = wqdffsdfs.sfth
+	var grupthlkj = wqdffsdfs.gfhthzuj
+	var gbnjfzjjjp = wqdffsdfs.dgghg
+
+
+
+
+	 function checkwin(ghjkl) {
+	 let wefvbvgfbg;
+
+	switch (dC) {
+		case 'easy' :
+			if (ghjkl === gbnjklopp) {
+				wefvbvgfbg = true;
+			};
+			break;
+		case 'normal' :
+			if (ghjkl === grupthlkj) {
+				wefvbvgfbg = true;
+			};
+			break;
+		case 'hard' :
+			if (ghjkl === gbnjfzjjjp) {
+				wefvbvgfbg = true;
+			};
+			break;
+	};
+	if (wefvbvgfbg === true) {
+		//wait 1 sec for the cards to flip right side up
+		setTimeout(async function (){
+			//fill in and display modal
+			document.getElementById('final-time').innerText = timer2.innerText;
+			document.getElementById('final-moves').innerText = moves;
+				modal.classList.remove('hide');
+
+			//security1
+
+			const tsE = Math.round(Date.now() / 1000);
+			var getTime = localStorage.getItem("mytime");
+
+
+			 const all = { timeStampEnd: tsE, time: timer3.innerText, timeStampStart: getTime, timeF: timer2.innerText, m1: moves }
+			 const options = {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+					body: JSON.stringify(all)
+			 };
+
+			 const response = await fetch('/api', options);
+			 const back = await response.json();
+
+
+
+			 //add/remove Event Listener
+
+				let f;
+				myForm.addEventListener('submit', f=function(event) {
+				event.preventDefault()
+
+
+				 if (confirm("Pritisni OK za potrditev ali Cancel za popravke")) {
+							this.removeEventListener('submit',f)
+					submitted(event.target)
+
+
+						} else {
+					 }
+			 })
+
+
+
+			  async function submitted(el) {
+				 //localStorage.test = 'test test2';
+
+        var diff = localStorage.getItem("setDiff");
+				const getDiff = { diff: diff }
+
+				let myForm = document.getElementById("myForm");
+        let fd =new FormData(myForm);
+
+ 			 for (let key of fd.keys()) {
+ 				 console.log(key, fd.get(key));
+ 			 }
+
+			 function convertFD2JSON(formData) {
+				 let obj = {};
+				 for (let key of formData.keys()) {
+					 obj[key] = formData.get(key);
+				 }
+				 return obj;
+			 }
+
+			 let fdJ = convertFD2JSON(fd);
+			 localStorage.lista = JSON.stringify(fdJ);
+
+				// const name = myForm.elements['name'];
+				// let fullName = name.value;
+				// const formS = JSON.stringify(Object.fromEntries(myForm));
+
+        const preComp = {timeSub: timer3.innerText, m2: moves}
+			  const allSub = Object.assign(preComp, getDiff, back, fdJ);
+				const optionsSub = {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+					body: JSON.stringify(allSub)
+			 };
+
+			 const responseSub = await fetch('/api', optionsSub);
+			 const backSub = await responseSub.json();
+
+
+				 localStorage.back38 = JSON.stringify(backSub);
+
+
+       // removeHandler();
+			 location.reload();
+       // startGame();
+			 }
+
+
+			 //stop the stopwatch
+ 			clearInterval(setTimer);
+
+
+
+		}, 1000);
+	}
+}
+
+function matchChecker(e){
+	//LOGIC IS: make sure the click target is a card and prevent doubleclicking
+
+	if (e.target.parentNode.classList.contains('card') && !e.target.parentNode.classList.contains('front-open')) {
+		//flip the card on click
+
+		e.target.parentNode.classList.add('front-open');
+		e.target.parentNode.nextElementSibling.classList.add('back-open');
+		//keep track of the class of the icons in the clicked cards
+		iconClasses.push(e.target.parentNode.nextElementSibling.firstChild.classList[2]);
+		//collect the clicked card elements
+		selectedCards.push(e.target.parentNode);
+		clickCount += 1;
+		//allow only two clicks and then verify the match
+		if (clickCount === 2) {
+			clickCount = 0;
+			//2 clicks make 1 move
+			moves +=1;
+			document.getElementById('moves').innerHTML = moves;
+			//remove the ability to click extra cards for 1 second while the 2 already clicked cards are checked
+			board.removeEventListener('click', matchChecker);
+			setTimeout(function(){
+				board.addEventListener('click', matchChecker);
+			}, 1000);
+			if (iconClasses[0]===iconClasses[1]) {
+				console.log('match');
+				correctMoves += 1;
+				//check if game is won
+				checkwin(correctMoves);
+				iconClasses = [];
+				//add the class 'correct' to keep the matched cards open
+				[].forEach.call(selectedCards, c =>{
+					c.classList.add('front-correct');
+					c.nextElementSibling.classList.add('back-correct');
+				});
+			} else {
+				console.log('not match');
+				//wait 1 second before closing mismatching cards, so the player can see what they were
+				setTimeout(function(){
+					iconClasses = [];
+					[].forEach.call(selectedCards, c =>{
+						c.classList.remove('front-open');
+						c.nextElementSibling.classList.remove('back-open');
+						selectedCards = [];
+					});
+				}, 1000);
+			}
+		}
+	}
+}
+
+
+
+reset.addEventListener('click', () => {
+	board.classList.toggle('activeN');
+	board.classList.toggle('activeE');
+	board.classList.toggle('activeH');
+
+	dashboard.classList.toggle('activeN');
+	dashboard.classList.toggle('activeE');
+	dashboard.classList.toggle('activeH');
+	startGame();
+});
+replay.addEventListener('click', () => {
+	board.classList.toggle('activeN')
+  board.classList.toggle('activeE');
+	board.classList.toggle('activeH');
+
+	dashboard.classList.toggle('activeN');
+	dashboard.classList.toggle('activeE');
+	dashboard.classList.toggle('activeH');
+	startGame();
+});
+form.addEventListener('change', startGame);
+
+window.addEventListener('click', function(e){
+	if (e.target === modal) {
+		startGame();
+	}
+});
+board.addEventListener('click', matchChecker);
+window.addEventListener('load', startGame);
+
+};
+
+       //window.onload = startGame;
+			 window.onload = startLoad;

@@ -85,6 +85,7 @@ app.post('/api', (request, response) => {
                           (body.moves1 == body.m2)) {
 
       databaseEasy.insert({
+      timeX: body.timeSub,
       time: body.timeFinal,
       moves: body.m2,
       nick: body.nick
@@ -101,6 +102,7 @@ app.post('/api', (request, response) => {
                                 (body.moves1 == body.m2)) {
 
        databaseNormal.insert({
+       timeX: body.timeSub,
        time: body.timeFinal,
        moves: body.m2,
        nick: body.nick
@@ -114,6 +116,7 @@ app.post('/api', (request, response) => {
                                 (body.moves1 == body.m2)) {
 
           databaseHard.insert({
+          timeX: body.timeSub,  
           time: body.timeFinal,
           moves: body.m2,
           nick: body.nick
