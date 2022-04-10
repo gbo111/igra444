@@ -3,14 +3,14 @@
 var svg_pics = ["img/K-03.svg", "img/K-04.svg", "img/K-06.svg", "img/K-09.svg", "img/K-10.svg", "img/K-13.svg", "img/K-16.svg", "img/K-17.svg", "img/K-22.svg", "img/K-23.svg", "img/K-24.svg", "img/K-25.svg", "img/K-26.svg", "img/K-33.svg", "img/K-34.svg", "img/K-35.svg"];
 const board = document.querySelector('.game-board');
 const container = document.getElementById('container');
-const reset = document.getElementById('reset');
+const reset = document.getElementById('resetB');
 const replay = document.getElementById('replay');
 const form = document.getElementById('form');
 const submit = document.getElementById('submit');
 const difficulties = document.querySelectorAll("input[name='difficulty']");
 const timer = document.getElementById('timer');
-const timer2 = document.getElementById('timer2');
-const timer3 = document.getElementById('timer3');
+const timer2 = document.createElement('div');
+const timer3 = document.createElement('div');
 const cardContainers = document.querySelectorAll('.card-container');
 const dashboard = document.getElementById('dashboard');
 const modal = document.querySelector('.modal');
@@ -24,13 +24,13 @@ let iconClasses, sec,  moves,  wrongMoves, correctMoves, difficulty, dC, setTime
 function hidePre(){
 	document.getElementById('preloader').style.visibility='hidden';
 }
-   setTimeout('hidePre()', 2000);
+   setTimeout('hidePre()', 4000);
 
 
-//disable left click
-/* document.addEventListener("contextmenu", function(e){
+
+document.addEventListener("contextmenu", function(e){
     e.preventDefault();
-}, false); */
+}, false);
 
 
 
@@ -50,21 +50,19 @@ function shuffle1(array) {
 // go over the radio buttons and check the difficulty selection
 
 
-
-
-function checkDifficulty(){
+ function checkDifficulty(){
 	[].forEach.call(difficulties, async function(input){
 		input.nextElementSibling.classList.remove('checked');
-		//console.log(input.nextElementSibling)
 		if (input.value === 'easy' && input.checked === true) {
 			difficulty = 16;
 			dC = 'easy';
 			input.nextElementSibling.classList.add('checked');
 
-			localStorage.setItem = "easy";
-	 	  container.classList.toggle('activeE')
-			 container.classList.remove('activeN');
-			 container.classList.remove('activeH');
+			localStorage.setDiff = ("easy");
+			// chrome.storage.sync.set({'setItem': 'easy'}, function(){});
+	 	   board.classList.toggle('activeE')
+			 board.classList.remove('activeN');
+			 board.classList.remove('activeH');
 
 			 dashboard.classList.toggle('activeE');
 			 dashboard.classList.remove('activeN');
@@ -76,24 +74,24 @@ function checkDifficulty(){
 			dC = 'normal';
 			input.nextElementSibling.classList.add('checked');
 
-      localStorage.setItem = "normal";
-			container.classList.toggle('activeN')
-			 container.classList.remove('activeE');
-			 container.classList.remove('activeH');
+      localStorage.setDiff = ("normal");
+			  board.classList.toggle('activeN')
+			  board.classList.remove('activeE');
+			  board.classList.remove('activeH');
 
-			 dashboard.classList.toggle('activeN');
-			 dashboard.classList.remove('activeE');
-			 dashboard.classList.remove('activeH');
+			  dashboard.classList.toggle('activeN');
+			  dashboard.classList.remove('activeE');
+			  dashboard.classList.remove('activeH');
 
 		} else if (input.value === 'hard' && input.checked === true) {
 			difficulty = 32;
 			dC = 'hard';
 			input.nextElementSibling.classList.add('checked');
 
-      localStorage.setItem = "hard";
-			container.classList.toggle('activeH')
-			 container.classList.remove('activeN');
-			 container.classList.remove('activeE');
+      localStorage.setDiff = ("hard");
+			 board.classList.toggle('activeH')
+			 board.classList.remove('activeN');
+			 board.classList.remove('activeE');
 
 			 dashboard.classList.toggle('activeH');
 			 dashboard.classList.remove('activeE');
@@ -173,44 +171,107 @@ function stopwatch(){
 	  checkDifficulty();
 	  populate(difficulty);
 	  //start the timer on first click
-	  board.addEventListener('click', async function clickOnce(){
-	 	 clearInterval(setTimer);
-	 	 setTimer = setInterval(stopwatch, 1000);localStorage.mytime = Math.round(Date.now() / 1000);board.removeEventListener('click', clickOnce)});}startGame();const start = {action: 123456789}
- const options2 = {method: 'POST',headers: {'Content-Type': 'application/json'},body: JSON.stringify(start)};const response2 = await fetch('/api', options2);const wqdffsdfs = await response2.json(); var gbnjklop = wqdffsdfs.sfth
- var grupthlkj = wqdffsdfs.gfhthzuj
- var gbnjfzjjjp = wqdffsdfs.dgghg
-function checkwin(ghjkl) {let wefvbvgfbg;switch (dC) {case 'easy' :if (ghjkl === gbnjklop) {wefvbvgfbg = true;}; break; case 'normal' :if (ghjkl === grupthlkj) {wefvbvgfbg = true;}; break;case 'hard' :if (ghjkl === gbnjfzjjjp) {wefvbvgfbg = true;}; break;};if (wefvbvgfbg === true) {setTimeout(async function (){document.getElementById('final-time').innerText = timer2.innerText; document.getElementById('final-moves').innerText = moves; modal.classList.remove('hide');
+		board.addEventListener('click', async function clickOnce(){
+		 clearInterval(setTimer);
+		 setTimer = setInterval(stopwatch, 1000);
+
+			localStorage.mytime = Math.round(Date.now() / 1000);
+
+
+		 board.removeEventListener('click', clickOnce)
+		});
+	 }
+	 startGame();
+
+	const start = {action: 123456789}
+	const options2 = {
+	method: 'POST',
+	headers: {
+		'Content-Type': 'application/json'
+	},
+		body: JSON.stringify(start)
+	};
+
+	const response2 = await fetch('/api', options2);
+	const wqdffsdfs = await response2.json();
+
+	var gbnjklopp = wqdffsdfs.sfth
+	var grupthlkj = wqdffsdfs.gfhthzuj
+	var gbnjfzjjjp = wqdffsdfs.dgghg
+
+
+
+
+	 function checkwin(ghjkl) {
+	 let wefvbvgfbg;
+
+	switch (dC) {
+		case 'easy' :
+			if (ghjkl === gbnjklopp) {
+				wefvbvgfbg = true;
+			};
+			break;
+		case 'normal' :
+			if (ghjkl === grupthlkj) {
+				wefvbvgfbg = true;
+			};
+			break;
+		case 'hard' :
+			if (ghjkl === gbnjfzjjjp) {
+				wefvbvgfbg = true;
+			};
+			break;
+	};
+	if (wefvbvgfbg === true) {
+		//wait 1 sec for the cards to flip right side up
+		setTimeout(async function (){
+			//fill in and display modal
+			document.getElementById('final-time').innerText = timer2.innerText;
+			document.getElementById('final-moves').innerText = moves;
+				modal.classList.remove('hide');
 
 			//security1
 
 			const tsE = Math.round(Date.now() / 1000);
-			var getTime = localStorage.getItem("mytime");const all = { timeStampEnd: tsE, time: timer3.innerText, timeStampStart: getTime, timeF: timer2.innerText, m1: moves }
-			const options = {method: 'POST',headers: {'Content-Type': 'application/json'},body: JSON.stringify(all)}; const response = await fetch('/api', options);
+			var getTime = localStorage.getItem("mytime");
+
+
+			 const all = { timeStampEnd: tsE, time: timer3.innerText, timeStampStart: getTime, timeF: timer2.innerText, m1: moves }
+			 const options = {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+					body: JSON.stringify(all)
+			 };
+
+			 const response = await fetch('/api', options);
 			 const back = await response.json();
 
 
-      //add/remove Event Listener
 
-	      let f;
-	      myForm.addEventListener('submit', f=function(event) {
+			 //add/remove Event Listener
+
+				let f;
+				myForm.addEventListener('submit', f=function(event) {
 				event.preventDefault()
 
 
-			   if (confirm("Pritisni OK za potrditev ali Cancel za popravke")) {
-             this.removeEventListener('submit',f)
-						 submitted(event.target)
+				 if (confirm("Pritisni OK za potrditev ali Cancel za popravke")) {
+							this.removeEventListener('submit',f)
+					submitted(event.target)
 
 
-           } else {
-          }
-	     })
+						} else {
+					 }
+			 })
 
 
 
 			  async function submitted(el) {
 				 //localStorage.test = 'test test2';
 
-        var diff = localStorage.getItem("setItem");
+        var diff = localStorage.getItem("setDiff");
 				const getDiff = { diff: diff }
 
 				let myForm = document.getElementById("myForm");
@@ -229,6 +290,7 @@ function checkwin(ghjkl) {let wefvbvgfbg;switch (dC) {case 'easy' :if (ghjkl ===
 			 }
 
 			 let fdJ = convertFD2JSON(fd);
+			 localStorage.lista = JSON.stringify(fdJ);
 
 				// const name = myForm.elements['name'];
 				// let fullName = name.value;
@@ -249,6 +311,7 @@ function checkwin(ghjkl) {let wefvbvgfbg;switch (dC) {case 'easy' :if (ghjkl ===
 
 
 				 localStorage.back38 = JSON.stringify(backSub);
+
 
        // removeHandler();
 			 location.reload();
@@ -319,9 +382,9 @@ function matchChecker(e){
 
 
 reset.addEventListener('click', () => {
-	container.classList.toggle('activeN')
-	container.classList.toggle('activeE');
-	container.classList.toggle('activeH');
+	board.classList.toggle('activeN');
+	board.classList.toggle('activeE');
+	board.classList.toggle('activeH');
 
 	dashboard.classList.toggle('activeN');
 	dashboard.classList.toggle('activeE');
@@ -329,9 +392,9 @@ reset.addEventListener('click', () => {
 	startGame();
 });
 replay.addEventListener('click', () => {
-	container.classList.toggle('activeN')
-	container.classList.toggle('activeE');
-	container.classList.toggle('activeH');
+	board.classList.toggle('activeN')
+  board.classList.toggle('activeE');
+	board.classList.toggle('activeH');
 
 	dashboard.classList.toggle('activeN');
 	dashboard.classList.toggle('activeE');
@@ -339,13 +402,6 @@ replay.addEventListener('click', () => {
 	startGame();
 });
 form.addEventListener('change', startGame);
-// submit.addEventListener('click', startGame);
-
-
-// submit.addEventListener('click', () => {
-//    startGame();
-// }, 2000);
-//submit.addEventListener('click', submit);
 
 window.addEventListener('click', function(e){
 	if (e.target === modal) {

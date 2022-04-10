@@ -8,6 +8,11 @@ function hidePre(){
 /////////////////////////////////////////////////////////
 
 
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+}, false);
+
+
 
 //Image display
 const cards = document.querySelectorAll('.image');

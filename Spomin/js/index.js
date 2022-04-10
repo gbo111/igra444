@@ -6,5 +6,9 @@ function hidePre(){
 }
    setTimeout('hidePre()', 1000);
 
+	 document.addEventListener("contextmenu", function(e){
+	     e.preventDefault();
+	 }, false);
+
 
 /////////////////////////////////////////////////////////
