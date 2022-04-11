@@ -33,7 +33,7 @@ async function getHSeasy() {
 
 	 function sortE() {
 	 dataHSeasy.sort((a, b) => {
-	 		if ((a.time > b.time) || ((a.time == b.time) && (a.moves > b.moves)))  {
+	 		if (((a.timeX + 1) > (b.timeX + 1 )) || (((a.timeX + 1) == (b.timeX + 1 )) && (a.moves > b.moves)))  {
 	 			return 1
 	 		} else {
 	 			return -1
@@ -91,7 +91,7 @@ async function getHSnormal() {
 
 	 function sortN() {
 	 dataHSnormal.sort((a, b) => {
-	 		if ((a.time > b.time) || ((a.time == b.time) && (a.moves > b.moves)))  {
+	 		if (((a.timeX + 1) > (b.timeX + 1 )) || (((a.timeX + 1) == (b.timeX + 1 )) && (a.moves > b.moves)))  {
 	 			return 1
 	 		} else {
 	 			return -1
@@ -151,7 +151,7 @@ async function getHShard() {
 
 	 function sortH() {
 	 dataHShard.sort((a, b) => {
-	 		if ((a.time > b.time) || ((a.time == b.time) && (a.moves > b.moves)))  {
+	 		if (((a.timeX + 1) > (b.timeX + 1 )) || (((a.timeX + 1) == (b.timeX + 1 )) && (a.moves > b.moves)))  {
 	 			return 1
 	 		} else {
 	 			return -1

@@ -27,11 +27,11 @@
 
  @media screen and (max-width: 760px) and (orientation: landscape) {
   .UMG {
-    width: 200px;
+    width: 240px;
     font-size: 1.8em;
   }
   .list {
-    width: 200px;
+    width: 240px;
     padding-bottom: 30px;
     font-size: 1.7em;
     letter-spacing: 1px;
