@@ -17,6 +17,7 @@ const modal = document.querySelector('.modal');
 let clickCount = 0;
 let selectedCards = [];
 let iconClasses, sec,  moves,  wrongMoves, correctMoves, difficulty, dC, setTimer;
+//const ts = Math.round(Date.now() / 1000);
 
 
 //Preloader
@@ -30,6 +31,7 @@ function hidePre(){
 document.addEventListener("contextmenu", function(e){
     e.preventDefault();
 }, false);
+
 
 
 
@@ -146,7 +148,7 @@ function stopwatch(){
 	let seconds = sec % 60;
   timer.innerText = nf(minutes, 2)+" : "+ nf(seconds, 2);
 	timer2.innerText = minutes +"min : "+ seconds + "sec";
-	timer3.innerText =  (minutes * 60) + seconds;
+  timer3.innerText =  nf(minutes, 2) + nf(seconds, 2);
 
 }
 
@@ -190,7 +192,6 @@ function stopwatch(){
 		body: JSON.stringify(start)
 	};
 
-
 	const response2 = await fetch('/api', options2);
 	const wqdffsdfs = await response2.json();
 
@@ -231,11 +232,11 @@ function stopwatch(){
 
 			//security1
 
+			const tsE = Math.round(Date.now() / 1000);
+			var getTime = localStorage.getItem("mytime");
 
-      localStorage.mytime2 = Math.round(Date.now() / 1000);
 
-
-			 const all = {timeF: timer2.innerText, timeEnd: timer3.innerText, m1: moves }
+			 const all = { timeStampEnd: tsE, time: timer3.innerText, timeStampStart: getTime, timeF: timer2.innerText, m1: moves }
 			 const options = {
 				method: 'POST',
 				headers: {
@@ -248,6 +249,7 @@ function stopwatch(){
 			 const back = await response.json();
 
 
+
 			 //add/remove Event Listener
 
 				let f;
@@ -255,7 +257,7 @@ function stopwatch(){
 				event.preventDefault()
 
 
-				 if (confirm("Pritisni OK za potrditev ali Cancel za popravke.")) {
+				 if (confirm("Pritisni OK za potrditev ali Cancel za popravke")) {
 							this.removeEventListener('submit',f)
 					submitted(event.target)
 
@@ -267,6 +269,7 @@ function stopwatch(){
 
 
 			  async function submitted(el) {
+				 //localStorage.test = 'test test2';
 
         var diff = localStorage.getItem("setDiff");
 				const getDiff = { diff: diff }
@@ -287,12 +290,13 @@ function stopwatch(){
 			 }
 
 			 let fdJ = convertFD2JSON(fd);
+			 localStorage.lista = JSON.stringify(fdJ);
 
- 			 var getTime = localStorage.getItem("mytime");
-			 var getTime2 = localStorage.getItem("mytime2");
+				// const name = myForm.elements['name'];
+				// let fullName = name.value;
+				// const formS = JSON.stringify(Object.fromEntries(myForm));
 
-
-        const preComp = {timeStampEnd: getTime2, timeStampStart: getTime, timeSub: timer3.innerText, m2: moves}
+        const preComp = {timeSub: timer3.innerText, m2: moves}
 			  const allSub = Object.assign(preComp, getDiff, back, fdJ);
 				const optionsSub = {
 				method: 'POST',
@@ -305,10 +309,21 @@ function stopwatch(){
 			 const responseSub = await fetch('/api', optionsSub);
 			 const backSub = await responseSub.json();
 
+
+				 localStorage.back38 = JSON.stringify(backSub);
+				 console.log(tsE);
+
+
+       // removeHandler();
 			 location.reload();
+       // startGame();
 			 }
 
+
+			 //stop the stopwatch
  			clearInterval(setTimer);
+
+
 
 		}, 1000);
 	}

@@ -76,63 +76,20 @@ app.post('/api', (request, response) => {
     const body = request.body;
 
 
-
-     if ((body.timeEnd == (body.timeRe) ||
-                          (body.timeRe + 1) ||
-                          (body.timeRe - 1)) &&
+if ((body.timeEnd == (body.timeRe) ||
+                          (body.timeRe + (1||2||3)) ||
+                          (body.timeRe - (1||2||3))) &&
                           (body.timeEnd == body.timeSub) &&
                           (body.diff == "easy") &&
-                          (body.moves1 == body.m2)) {
+                          (body.moves1 == body.m2)
+                        ){
 
-      databaseEasy.insert({
-      timeX: body.timeSub,
-      time: body.timeFinal,
-      moves: body.m2,
-      nick: body.nick
-
-      });
-
-
-
-    } if ((body.timeEnd == (body.timeRe) ||
-                                (body.timeRe + 1) ||
-                                (body.timeRe - 1)) &&
-                                (body.timeEnd == body.timeSub) &&
-                                (body.diff == "normal") &&
-                                (body.moves1 == body.m2)) {
-
-       databaseNormal.insert({
-       timeX: body.timeSub,
-       time: body.timeFinal,
-       moves: body.m2,
-       nick: body.nick
-
-       });
-    } if ((body.timeEnd == (body.timeRe) ||
-                                (body.timeRe + 1) ||
-                                (body.timeRe - 1)) &&
-                                (body.timeEnd == body.timeSub) &&
-                                (body.diff == "hard") &&
-                                (body.moves1 == body.m2)) {
-
-          databaseHard.insert({
-          timeX: body.timeSub,
-          time: body.timeFinal,
-          moves: body.m2,
-          nick: body.nick
-
-          });
-
-    }
-
-///////////////////////////////////////////////////
-
-    if ((body.timeEnd == (body.timeRe) ||
-                         (body.timeRe + 1) ||
-                         (body.timeRe - 1)) &&
-                         (body.timeEnd == body.timeSub) &&
-                         (body.diff == "easy") &&
-                         (body.moves1 == body.m2)) {
+     databaseEasy.insert({
+     timeX: body.timeSub,
+     time: body.timeFinal,
+     moves: body.m2,
+     nick: body.nick
+     });
 
      databaseEasyAlldata.insert({
      timeX: body.timeSub,
@@ -144,52 +101,70 @@ app.post('/api', (request, response) => {
      mail: body.mail,
      gdpr: body.gdpr,
      mailing: body.mailing
+     // timeStamp: body.timeStampStart
 
      });
+}
 
+if ((body.timeEnd == (body.timeRe) ||
+                          (body.timeRe + (1||2||3)) ||
+                          (body.timeRe - (1||2||3))) &&
+                          (body.timeEnd == body.timeSub) &&
+                          (body.diff == "normal") &&
+                          (body.moves1 == body.m2)
+                        ){
 
+     databaseNormal.insert({
+     timeX: body.timeSub,
+     time: body.timeFinal,
+     moves: body.m2,
+     nick: body.nick
+     });
 
-   } if ((body.timeEnd == (body.timeRe) ||
-                               (body.timeRe + 1) ||
-                               (body.timeRe - 1)) &&
-                               (body.timeEnd == body.timeSub) &&
-                               (body.diff == "normal") &&
-                               (body.moves1 == body.m2)) {
+     databaseNormalAlldata.insert({
+     timeX: body.timeSub,
+     time: body.timeFinal,
+     moves: body.m2,
+     name: body.name,
+     nick: body.nick,
+     sola: body.sola,
+     mail: body.mail,
+     gdpr: body.gdpr,
+     mailing: body.mailing
+     // timeStamp: body.timeStampStart
 
-      databaseNormalAlldata.insert({
-      timeX: body.timeSub,
-      time: body.timeFinal,
-      moves: body.m2,
-      name: body.name,
-      nick: body.nick,
-      sola: body.sola,
-      mail: body.mail,
-      gdpr: body.gdpr,
-      mailing: body.mailing
+     });
+}
 
-      });
-   } if ((body.timeEnd == (body.timeRe) ||
-                               (body.timeRe + 1) ||
-                               (body.timeRe - 1)) &&
-                               (body.timeEnd == body.timeSub) &&
-                               (body.diff == "hard") &&
-                               (body.moves1 == body.m2)) {
+if ((body.timeEnd == (body.timeRe) ||
+                          (body.timeRe + (1||2||3)) ||
+                          (body.timeRe - (1||2||3))) &&
+                          (body.timeEnd == body.timeSub) &&
+                          (body.diff == "hard") &&
+                          (body.moves1 == body.m2)
+                        ){
 
-         databaseHardAlldata.insert({
-         timeX: body.timeSub,     
-         time: body.timeFinal,
-         moves: body.m2,
-         name: body.name,
-         nick: body.nick,
-         sola: body.sola,
-         mail: body.mail,
-         gdpr: body.gdpr,
-         mailing: body.mailing
+     databaseHard.insert({
+     timeX: body.timeSub,
+     time: body.timeFinal,
+     moves: body.m2,
+     nick: body.nick
+     });
 
-         });
+     databaseHardAlldata.insert({
+     timeX: body.timeSub,
+     time: body.timeFinal,
+     moves: body.m2,
+     name: body.name,
+     nick: body.nick,
+     sola: body.sola,
+     mail: body.mail,
+     gdpr: body.gdpr,
+     mailing: body.mailing
+     // timeStamp: body.timeStampStart
 
-   }
-
+     });
+}
 
 
     response.json({
@@ -197,10 +172,10 @@ app.post('/api', (request, response) => {
     gfhthzuj: 12,
     dgghg: 16,
 
-    timeEnd:  body.time,
+    timeEnd:  body.timeEnd,
     timeFinal: body.timeF,
     timeRe: body.timeStampEnd - body.timeStampStart,
-    moves1: body.m1,
+    moves1: body.m1
 
 
   });
