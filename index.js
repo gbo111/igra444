@@ -100,8 +100,8 @@ if ((body.timeEnd == (body.timeRe) ||
      sola: body.sola,
      mail: body.mail,
      gdpr: body.gdpr,
-     mailing: body.mailing
-     // timeStamp: body.timeStampStart
+     mailing: body.mailing,
+     timeStamp: body.timeStampStart
 
      });
 }
@@ -130,8 +130,8 @@ if ((body.timeEnd == (body.timeRe) ||
      sola: body.sola,
      mail: body.mail,
      gdpr: body.gdpr,
-     mailing: body.mailing
-     // timeStamp: body.timeStampStart
+     mailing: body.mailing,
+     timeStamp: body.timeStampStart
 
      });
 }
@@ -160,8 +160,8 @@ if ((body.timeEnd == (body.timeRe) ||
      sola: body.sola,
      mail: body.mail,
      gdpr: body.gdpr,
-     mailing: body.mailing
-     // timeStamp: body.timeStampStart
+     mailing: body.mailing,
+     timeStamp: body.timeStampStart
 
      });
 }
