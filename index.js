@@ -75,7 +75,7 @@ app.post('/api', (request, response) => {
   console.log('I got a request!');
     const body = request.body;
 
-
+    
 if ((body.timeEnd == (body.timeRe) ||
                           (body.timeRe + (1||2||3)) ||
                           (body.timeRe - (1||2||3))) &&
@@ -83,6 +83,8 @@ if ((body.timeEnd == (body.timeRe) ||
                           (body.diff == "easy") &&
                           (body.moves1 == body.m2)
                         ){
+
+
 
      databaseEasy.insert({
      timeX: body.timeSub,
