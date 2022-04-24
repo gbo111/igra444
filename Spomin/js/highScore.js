@@ -9,17 +9,11 @@ const closeHS = document.getElementById('closeHS');
 
 toggle.addEventListener('click', () => {
    nav.classList.toggle('active');
-   getHSeasy();
-   getHSnormal();
-   getHShard();
 	 });
 
 highScoreB.addEventListener('click', () => {
    highScore.classList.toggle('active');
 	 nav.classList.toggle('active');
-   getHSeasy();
-   getHSnormal();
-   getHShard();
 
 });
 
