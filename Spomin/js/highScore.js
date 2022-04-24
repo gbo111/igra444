@@ -9,11 +9,17 @@ const closeHS = document.getElementById('closeHS');
 
 toggle.addEventListener('click', () => {
    nav.classList.toggle('active');
+   getHSeasy();
+   getHSnormal();
+   getHShard();
 	 });
 
 highScoreB.addEventListener('click', () => {
    highScore.classList.toggle('active');
 	 nav.classList.toggle('active');
+   getHSeasy();
+   getHSnormal();
+   getHShard();
 
 });
 
@@ -32,16 +38,13 @@ async function getHSeasy() {
 	sortE();
 
 	 function sortE() {
-	 dataHSeasy.sort((a, b) => {
-	 		if (((a.timeX) > (b.timeX)) || (((a.timeX) == (b.timeX)) && (a.moves > b.moves)))  {
-	 			return 1
-	 		} else {
-	 			return -1
-	 		}
-		});
+	 dataHSeasy.sort((a, b) =>
+     a.timeX - b.timeX || a.moves - b.moves
+	  );
 
      dataHSeasy.splice(3);
 
+     console.log(dataHSeasy);
 
 		for (item of dataHSeasy) {
 		  // const easyTop3 = document.getElementById('easyTop3');
@@ -90,13 +93,16 @@ async function getHSnormal() {
 	sortN();
 
 	 function sortN() {
-	 dataHSnormal.sort((a, b) => {
-	 		if (((a.timeX) > (b.timeX)) || (((a.timeX) == (b.timeX)) && (a.moves > b.moves)))  {
-	 			return 1
-	 		} else {
-	 			return -1
-	 		}
-		});
+	 dataHSnormal.sort((a, b) =>
+     a.timeX - b.timeX || a.moves - b.moves
+	  );
+   //=> {
+	 	//	if (((a.timeX) > (b.timeX)) || (((a.timeX) == (b.timeX)) && (a.moves > b.moves)))  {
+	 		//	return 1
+	 		//} else {
+	 		//	return -1
+	 	//	}
+		//});
 
 		dataHSnormal.splice(3);
 
@@ -150,13 +156,9 @@ async function getHShard() {
 	sortH();
 
 	 function sortH() {
-	 dataHShard.sort((a, b) => {
-	 		if (((a.timeX) > (b.timeX)) || (((a.timeX) == (b.timeX)) && (a.moves > b.moves)))  {
-	 			return 1
-	 		} else {
-	 			return -1
-	 		}
-		});
+	 dataHShard.sort((a, b) =>
+     a.timeX - b.timeX || a.moves - b.moves
+	  );
 
 		dataHShard.splice(3);
 
