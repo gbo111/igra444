@@ -8,6 +8,7 @@
   	align-items: flex-end;
     justify-content: center;
     padding-right: 0;
+		width: 100%;
   }
 
   .rightside {
@@ -16,12 +17,23 @@
   	justify-content: center;
     width: 100%;
     padding-left: 0;
+		padding-top: 10px;
   }
 
   .list {
     justify-content: center;
     text-align: left;
+		padding-bottom: 0em;
   }
+
+
+	.langBar {
+    
+		margin-top: 6px;
+	  margin-left: 0px;
+	  margin-bottom: 0px;
+
+	}
 
 	}
 
@@ -32,13 +44,25 @@
   }
   .list {
     width: 240px;
-    padding-bottom: 30px;
-    font-size: 1.7em;
+    /* padding-bottom: 30px; */
+    font-size: 2.8em;
     letter-spacing: 1px;
   }
   .list a{
-    margin: 10px 0 0 0;
+    outline: #545454 solid 5px;
+		width: 85px;
+	  height: 70px;
+	  margin: auto;
+	  padding-top: 7.5px;
   }
+
+	.mUp {
+	  height: 90px;
+	}
+	.mDown {
+	  height: 90px;
+	}
+
 }
 
 @media screen and (max-width: 620px) and (orientation: landscape) {
@@ -48,13 +72,25 @@
   }
   .list {
     width: 175px;
-    padding-bottom: 24px;
-    font-size: 1.3em;
+    /* padding-bottom: 24px; */
+    font-size: 2.2em;
     letter-spacing: 1px;
   }
   .list a{
-    margin: 8px 0 0 0;
+    outline: #545454 solid 4px;
+		width: 70px;
+	  height: 55px;
+	  margin: auto;
+	  padding-top: 6.5px;
   }
+
+	.mUp {
+		height: 80px;
+	}
+	.mDown {
+		height: 80px;
+	}
+
 }
 
  @media screen and (max-width: 520px) and (orientation: portrait) {
@@ -65,12 +101,23 @@
 	 .list {
 	 	width: 220px;
 	 	padding-bottom: 30px;
-	 	font-size: 1.6em;
+	 	font-size: 2.8em;
 	 	letter-spacing: 1px;
 	 }
 	 .list a{
-	 	margin: 10px 0 0 0;
+	 	outline: #545454 solid 5px;
+		width: 85px;
+		height: 70px;
+		margin: auto;
+		padding-top: 6.5px;
 	 }
+
+	 .mUp {
+ 		height: 90px;
+ 	}
+ 	.mDown {
+ 		height: 90px;
+ 	}
 }
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
@@ -80,11 +127,21 @@
   }
   .list {
     width: 175px;
-    padding-bottom: 24px;
-    font-size: 1.3em;
+    font-size: 2.2em;
     letter-spacing: 1px;
   }
   .list a{
-    margin: 8px 0 0 0;
+		outline: #545454 solid 4px;
+		width: 70px;
+	  height: 55px;
+	  margin: auto;
+	  padding-top: 6px;
   }
+
+	.mUp {
+		height: 80px;
+	}
+	.mDown {
+		height: 80px;
+	}
 }

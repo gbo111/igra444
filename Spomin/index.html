@@ -8,7 +8,7 @@
 	<meta http-equiv="Content-Security-Policy"
         content="default-src 'self' data: gap: 'unsafe-eval' ws: ;
         style-src 'self' 'unsafe-inline' *.fontawesome.com;
-				script-src 'self' 'unsafe-eval';
+				script-src 'self' 'unsafe-eval' 'sha256-LiYy7y7JFt/FRyDva3A8ki6U2H5L9RHXhet/YnS8LHU=';
         media-src 'none';
         font-src 'self' *.fontawesome.com;
         connect-src 'self';
@@ -36,23 +36,23 @@
 
 			 <div class="HSlists">
 
-				<h1 class="highScoreName" id="highScoreName">High Scores</h1>
+				<h1 class="highScoreName" id="highScoreName">High Score</h1>
 			 <div class="top3" id="top3">
-			<p>EASY Mode TOP 3</p>
+			<p class="emt3" id="emt3">EASY Mode TOP 3</p>
 		 <ul>
 			<li class="easyTime1text" id="easyTime1text"></li> <li class="easyTime1" id="easyTime1"></li>
 			<li class="easyMoves1text" id="easyMoves1text"></li> <li class="easyMoves1" id="easyMoves1"></li>
 			<li class="easyName1text" id="easyName1text"></li><li class="easyName1" id="easyName1"></li>
 		</ul>
 
-		<p>NORMAL Mode TOP 3</p>
+		<p class="nmt3" id="nmt3">NORMAL Mode TOP 3</p>
 		<ul>
 		 <li class="normalTime1text" id="normalTime1text"></li> <li class="normalTime1" id="normalTime1"></li>
 		 <li class="normalMoves1text" id="normalMoves1text"></li> <li class="normalMoves1" id="normalMoves1"></li>
 		 <li class="normalName1text" id="normalName1text"></li><li class="normalName1" id="normalName1"></li>
 	 </ul>
 
-		<p>HARD Mode TOP 3</p>
+		<p class="hmt3" id="hmt3">HARD Mode TOP 3</p>
 	 <ul>
 		<li class="hardTime1text" id="hardTime1text"></li> <li class="hardTime1" id="hardTime1"></li>
 		<li class="hardMoves1text" id="hardMoves1text"></li> <li class="hardMoves1" id="hardMoves1"></li>
@@ -78,20 +78,56 @@
 		 <div class="rightside" id="rightside">
 
 			 <div class="list">
-		 			 <a href="02_Play.html">Play</a>
-		 			 <a href="03_Tools.html">Tools</a>
-         	 <a class="highScoreB" id="highScoreB">HighScore</a>
+
+				<div class="mUp">
+					<a href="02_Play.html">
+				   <i class="fas fa-play"></i>
+				  </a>
+
+					<a class="highScoreB" id="highScoreB">
+ 				   <i class="fas fa-stopwatch"></i>
+ 				 </a>
+
+			 </div>
+
+			 <div class="mDown">
+				<a href="03_Tools.html">
+				 <i class="fas fa-wrench"></i>
+			  </a>
+
+				<a href="#">
+				 <i class="fas fa-language" id="language"></i>
+			  </a>
+
+			 </div>
 		 	</div>
+
+
+			<div class="langBar" id="langBar">
+
+				<button class="toggle" id="toggle">
+					<i class="fas fa-times"></i>
+				</button>
+						<p class="langText" id="langText">select language</p>
+
+					<div class="languageSelect" id="languageSelect">
+						<p class="eng" id="eng" language='eanglish'>ENG</p>
+						<p class="slo" id="slo" language='slovensko'>SLO</p>
+						<p class="srb" id="srb" language='srbsko'>SRB</p>
+					</div>
+			</div>
+
+
 
 	 </div>
 	</div>
 </div>
 
- <div class="toggle" id="toggle" style="visibility: none; height:0; width:0;"></div>
+ <nav class="nav" id="nav" style="visibility: none; height:0; width:0;"></nav>
 
-
-<script type="text/javascript" src="js/highScore.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/highScore.js" integrity="sha256-LiYy7y7JFt/FRyDva3A8ki6U2H5L9RHXhet/YnS8LHU="></script>
+
 <!-- <script type="text/javascript" src="js/highScore.js" integrity="sha256-z/7B3gdmls6IJbk+nBkM8MFtJaqwhxtQIuTW5P6GdRo="></script>
 <script type="text/javascript" src="js/index.js" integrity="sha256-WgzS6NcKLi5EN7pja5Y0k5d0K6rcwAFZgZLmg3ZGthQ="></script> -->
 

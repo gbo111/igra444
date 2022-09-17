@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-    
   },
   "keywords": [
     "spomin",
@@ -14,12 +13,17 @@
   "author": "Ales G",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.19.2",
-    "crypto": "^1.0.1",
-    "cryptr": "^6.0.2",
     "dotenv": "^16.0.0",
     "express": "^4.17.2",
     "nedb": "^1.8.0",
     "sanitize-html": "^2.7.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbo111/Spomin-1-5.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gbo111/Spomin-1-5/issues"
+  },
+  "homepage": "https://github.com/gbo111/Spomin-1-5#readme"
 }

@@ -8,10 +8,8 @@ require('dotenv').config();
 const port = process.env.PORT || 3000;
 app.listen(port, () => {console.log('Starting server at ${port}')});
 app.use(express.static('Spomin'));
-app.use(express.json({ limit: '1mb' }));
+app.use(express.json({ limit: '1000mb' }));
 
- var Cryptr = require('cryptr'),
- cryptr = new Cryptr('gbo');
 
 
 const databaseEasy = new Datastore('databaseEasy.db');
@@ -32,6 +30,18 @@ databaseNormalAlldata.loadDatabase();
 
 const databaseHardAlldata = new Datastore('databaseHardAlldata.db');
 databaseHardAlldata.loadDatabase();
+
+//////////////////////////////////////////////////////////////
+////_MAX TimeStamp
+
+const tsMax_easy = new Datastore('tsMax_easy.db');
+tsMax_easy.loadDatabase();
+
+const tsMax_normal = new Datastore('tsMax_normal.db');
+tsMax_normal.loadDatabase();
+
+const tsMax_hard = new Datastore('tsMax_hard.db');
+tsMax_hard.loadDatabase();
 
 
 //HighScore
@@ -70,6 +80,130 @@ app.get('/apiHard', (request, response) => {
 })
 
 //HighScoreEnd
+
+//_export_
+
+app.get('/apiEasy1', (request, response) => {
+
+  databaseEasyAlldata.find({},(err, data) => {
+    response.json(data);
+    if (err) {
+      response.err();
+      return;
+    }
+  })
+})
+
+app.get('/apiNormal1', (request, response) => {
+
+  databaseNormalAlldata.find({},(err, data) => {
+    response.json(data);
+    if (err) {
+      response.err();
+      return;
+    }
+  })
+})
+
+app.get('/apiHard1', (request, response) => {
+
+  databaseHardAlldata.find({},(err, data) => {
+    response.json(data);
+    if (err) {
+      response.err();
+      return;
+    }
+  })
+})
+
+/////////////////////////////////////////////////////////////
+
+
+//_export_MAXst
+
+
+
+app.post('/apiEasyTS', (request, response) => {
+    const body = request.body;
+
+    tsMax_easy.insert({
+    timeStamp: body.timeStamp
+    });
+
+    response.json({
+    timeStamp: body.timeStamp
+    });
+  });
+
+  app.get('/apiTSmaxEasy', (request, response) => {
+
+    tsMax_easy.find({},(err, data) => {
+      response.json(data);
+      if (err) {
+        response.err();
+        return;
+      }
+    })
+  })
+/////////////////////////////////////////////////////////////
+
+app.post('/apiNormalTS', (request, response) => {
+    const body = request.body;
+
+    tsMax_normal.insert({
+    timeStamp: body.timeStamp
+    });
+
+    response.json({
+    timeStamp: body.timeStamp
+    });
+  });
+
+app.get('/apiTSmaxNormal', (request, response) => {
+
+  tsMax_normal.find({},(err, data) => {
+    response.json(data);
+    if (err) {
+      response.err();
+      return;
+    }
+  })
+})
+////////////////////////////////////////////////////////////////
+
+app.post('/apiHardTS', (request, response) => {
+    const body = request.body;
+
+    tsMax_hard.insert({
+    timeStamp: body.timeStamp
+    });
+
+    response.json({
+    timeStamp: body.timeStamp
+    });
+  });
+
+app.get('/apiTSmaxHard', (request, response) => {
+
+  tsMax_hard.find({},(err, data) => {
+    response.json(data);
+    if (err) {
+      response.err();
+      return;
+    }
+  })
+})
+
+
+// app.post('/apiTSmaxNormal', (request, response) => {
+//     const body = request.body;}
+// );
+//
+// app.post('/apiTSmaxHard', (request, response) => {
+//     const body = request.body;}
+// );
+
+//_export_end
 
 app.post('/api', (request, response) => {
   console.log('I got a request!');
@@ -150,7 +284,7 @@ if ((body.timeEnd == (body.timeRe) ||
      moves: body.m2,
      name: body.name,
      nick: body.nick,
-     sola: body.sola,
+     drzava: body.drzava,
      mail: body.mail,
      gdpr: body.gdpr,
      mailing: body.mailing,
@@ -180,7 +314,7 @@ if ((body.timeEnd == (body.timeRe) ||
      moves: body.m2,
      name: body.name,
      nick: body.nick,
-     sola: body.sola,
+     drzava: body.drzava,
      mail: body.mail,
      gdpr: body.gdpr,
      mailing: body.mailing,
@@ -210,7 +344,7 @@ if ((body.timeEnd == (body.timeRe) ||
      moves: body.m2,
      name: body.name,
      nick: body.nick,
-     sola: body.sola,
+     drzava: body.drzava,
      mail: body.mail,
      gdpr: body.gdpr,
      mailing: body.mailing,

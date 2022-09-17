@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'NHG_Bd';
-	src: url(/font/NHaasGroteskTXPro-75Bd.ttf);
+	src: url(../font/NHaasGroteskTXPro-75Bd.ttf);
 	font-style: normal;
 	font-weight: 100;
 }
@@ -8,7 +8,7 @@
 
 @font-face {
 	font-family: 'NHG_Md';
-	src: url(/font/NHaasGroteskTXPro-65Md.ttf);
+	src: url(../font/NHaasGroteskTXPro-65Md.ttf);
 	font-style: normal;
 	font-weight: 100;
 }

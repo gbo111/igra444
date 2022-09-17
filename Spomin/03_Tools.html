@@ -7,7 +7,7 @@
 	<meta http-equiv="Content-Security-Policy"
 				content="default-src 'self' data: gap: 'unsafe-eval' ws: ;
 				style-src 'self' 'unsafe-inline' *.fontawesome.com;
-				script-src 'self' 'unsafe-eval';
+				script-src 'self' 'unsafe-eval' 'sha256-LiYy7y7JFt/FRyDva3A8ki6U2H5L9RHXhet/YnS8LHU=';
 				media-src 'none';
 				font-src 'self' *.fontawesome.com;
 				connect-src 'self';
@@ -16,9 +16,9 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/tools.css">
+		<link rel="stylesheet" href="css/toolsMediaQ .css">
 		<link rel="stylesheet" href="css/highScore.css">
-		 <link rel="stylesheet" href="css/toolsMediaQ .css">
-	   <link rel="stylesheet" href="css/nav.css"> 
+	   <link rel="stylesheet" href="css/nav.css">
 
 
 </head>
@@ -33,23 +33,23 @@
 
 				<div class="HSlists">
 
-					<h1 class="highScoreName" id="highScoreName">High Scores</h1>
+					<h1 class="highScoreName" id="highScoreName">High Score</h1>
 				<div class="top3">
-				<p>EASY Mode TOP 3</p>
+				<p class="emt3" id="emt3">EASY Mode TOP 3</p>
 			 <ul>
 				<li class="easyTime1text" id="easyTime1text"></li> <li class="easyTime1" id="easyTime1"></li>
 				<li class="easyMoves1text" id="easyMoves1text"></li> <li class="easyMoves1" id="easyMoves1"></li>
 				<li class="easyName1text" id="easyName1text"></li><li class="easyName1" id="easyName1"></li>
 			</ul>
 
-			<p>NORMAL Mode TOP 3</p>
+			<p class="nmt3" id="nmt3">NORMAL Mode TOP 3</p>
 			<ul>
 			 <li class="normalTime1text" id="normalTime1text"></li> <li class="normalTime1" id="normalTime1"></li>
 			 <li class="normalMoves1text" id="normalMoves1text"></li> <li class="normalMoves1" id="normalMoves1"></li>
 			 <li class="normalName1text" id="normalName1text"></li><li class="normalName1" id="normalName1"></li>
 		 </ul>
 
-			<p>HARD Mode TOP 3</p>
+			<p class="hmt3" id="hmt3">HARD Mode TOP 3</p>
 		 <ul>
 			<li class="hardTime1text" id="hardTime1text"></li> <li class="hardTime1" id="hardTime1"></li>
 			<li class="hardMoves1text" id="hardMoves1text"></li> <li class="hardMoves1" id="hardMoves1"></li>
@@ -60,19 +60,36 @@
 	 </div>
 	</div>
 
+
 	 <nav id="nav">
 		<button class="toggle" id="toggle">
 			 <i class="fas fa-bars"></i>
 			 <i class="fas fa-times"></i>
 		</button>
 
-		<ul>
-			 <li><a href="02_Play.html" class="play">Play</a></li>
-			 <li><a href="#" class="tools">Tools</a></li>
-			 <li><a class="highScoreB" id="highScoreB">HighScore</a></li>
-		</ul>
+		<div class="list" >
+      <a href="02_Play.html" class="play">
+			 <i class="fas fa-play"></i>
+		 </a>
+		 <a href="#" style="color: #E4032E; cursor: default; pointer-events: none;">
+		 <i class="fas fa-wrench"></i>
+		</a>
+		<a class="highScoreB" id="highScoreB">
+		 <i class="fas fa-stopwatch"></i>
+	 </a>
+     <a href="#">
+		 <i class="fas fa-language" id="language"></i>
+	 </a>
+</div>
+
+			<div class="langBar" id="langBar">
+				<p class="eng" id="eng" language='english'>ENG</p>
+				<p class="slo" id="slo" language='slovensko' >SLO</p>
+				<p class="srb" id="srb" language='srbsko'>SRB</p>
+			</div>
 
 	 </nav>
+
 
 
 	 <div class="mainContainer" id="mainContainer">
@@ -81,13 +98,7 @@
   <div class="display" id="display">
 
    <div class="left">
-	  	<div  class="description" id="description"><p>
-			O tekmovanju <br><br>
-      Unior je eno največjih slovenskih podjetij in eden največjih zaposlovalcev v Sloveniji.
-			Sodelujemo z najpomembnejšimi globalnimi proizvajalci visokotehnoloških rešitev ter se s
-			številnimi projekti izjemno radi povezujemo z izobraževalnimi ustanovami. Z njimi želimo prenašati svoje znanje,
-			izkušnje in rešitve neposredno na šolarje, jih z raznolikimi projekti spodbuditi, praktično izobraziti, ter jim z
-			vpogledom v prakso pomagati pri izbiri prihodnje poklicne in karierne poti.</p></div>
+	  	<div  class="description" id="description"><p>UNIOR ORODJA</p></div>
    </div>
 
    <div class="right">
@@ -96,7 +107,7 @@
 
 	</div>
 
-	<!-- <div class="containerScroll" id="containerScroll"> -->
+
     <div class="container" id="container">
 
   <img class="image" id="image0" src="img/K-01_Front.svg" alt="K">
@@ -128,7 +139,7 @@
 
 
 <script type="text/javascript" src="js/tools.js"></script>
-<script type="text/javascript" src="js/highScore.js"></script>
+<script type="text/javascript" src="js/highScore.js" integrity="sha256-LiYy7y7JFt/FRyDva3A8ki6U2H5L9RHXhet/YnS8LHU="></script>
 
 </body>
 </html>
